@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+/* Used Google Fonts Extension */
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:regular,600);  /* Medium isn't used.  */
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+body {
+	font-family: "IBM Plex Sans", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 1.5;
+}
+
+mark {
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+footer {
+	text-align: center;
+}
+
+.header {
+	font-family: "Fredericka the Great", serif;
+	text-align: center;
+}
+
+.header__title {
+	color: rgb(81, 17, 185);
+	font-style: italic; /* font-style: normal;*/
+	font-size: 34px;
+	font-weight: 400;
+	line-height: 2;
+	text-shadow: 1px -1px 2px rgb(239, 172, 17); /* offset-x | offset-y | blur-radius | color */
+	text-transform: capitalize;
+}
+
+.header__menu {
+	font-size: 24px;
+	word-spacing: 10px;
+}
+
+.main__title {
+	font-family: "Syne Tactile", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 24px;
+	color: brown;
+	line-height: 1.8;
+}
+
+
+/* Personal Portfolio */
+.personal-portfolio {
+	font-family: "Work Sans";
+	font-style: normal;
+	font-weight: 400;  /* Work Sans Regular is used most often (57 times) */
+}
+
+.personal-portfolio p {
+	color: #556070;
+	font-size: 18px;
+	line-height: 1.33; /* 133.333% */
+}
+
+.personal-portfolio__header {
+	color: #132238;
+	font-size: 38px;
+	font-weight: 600;
+	line-height: 1.31; /* 131.579% */
+}
+
+
+/* Landing Page Template */
+.landing-page-template {
+	font-family: "Roboto", sans-serif; /* font-family is inherited */
+	font-style: normal; /* font-style is inherited */
+	font-weight: 400;  /* font-weight is inherited */
+}
+
+.landing-page-template p {
+	color: #505F98;
+	font-size: 18px;
+	line-height: 1.66; /* 166.667% */
+}
+
+.landing-page-template__header {
+	color: #091133;
+	font-size: 50px;
+	font-weight: 500;
+	line-height: 1.32; /* 132% */
+	letter-spacing: 1px;
+}
+
+
+/* Business Presentation */
+.business-presentation {
+	font-family: "DM Sans", sans-serif;
+	font-style: normal;
+	font-weight: 700;   /* DM Sans Bold is used most often (58 times) */
+}
+
+.business-presentation p {
+	color: #474464;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1.75; /* 175% */
+}
+
+.business-presentation__header {
+	color: #1E1B39;
+	font-size: 88px;
+	line-height: 1.07; /* 107.955% */
+}
