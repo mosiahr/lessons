@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import sys
 
@@ -11,6 +13,7 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
    <title>{}</title>
 </head>
 
@@ -22,32 +25,101 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
 
 </html>'''
 
-def create_html_file(path='index.html', title=None):
-    if ispath(path):
-        print(f"A '{path}' file already exists! The file isn't created!")
-    else:
-        with open(path, 'w') as f:
-            f.write(DEFAULT_INDEX_HTML.format(title or DEFAULT_TITLE_NAME))
-            print(f"A '{path}' file is created successfully!")
+DEFAULT_STYLE_CSS = \
+'''/* Local fonts */
+@import url('fonts.css');
 
-def create_gitignore(path='.gitignore'):
-    if ispath(path):
-        print(f"A '{path}' file already exists! The file isn't created!")
-    else:
-        with open(path, 'w') as f:
-            print(f"A '{path}' file is created successfully!")
+/* Reset */
+@import url('reset.css');
+'''
+
+DEFAULT_RESET_CSS = \
+'''*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: none;
+
+	box-sizing: border-box;
+}
+*::before,
+*::after {
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: inherit;
+}
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	line-height: 1;
+	height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+/* FORM */
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+input,
+textarea {
+	width: 100%;
+}
+button,
+select,
+option {
+	cursor: pointer;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	appearance: none;
+}
+'''
 
 def ispath(path):
     if os.path.exists(path):
         return True
     return False
 
+def create_file(path, text=''):
+    if ispath(path):
+        print(f"The '{path}' file already exists! The file isn't created!")
+    else:
+        with open(path, 'w') as f:
+            f.write(text)
+            print(f"The '{path}' file is created successfully!")
+
 def create_folder(path):
     if ispath(path):
-        print(f"A '{path}' folder already exists! The folder isn't created!")
+        print(f"The '{path}' folder already exists! The folder isn't created!")
     else:
         os.makedirs(path)
-        print(f"A '{path}' folder is created successfully!")
+        print(f"The '{path}' folder is created successfully!")
 
 
 if __name__ == '__main__':
@@ -61,12 +133,18 @@ if __name__ == '__main__':
     for item in DIR_LIST:
         path = os.path.join(project_dir, item)
         create_folder(path)
-
-        file_path = os.path.join(path, '.gitignore')
-        create_gitignore(file_path)
+        create_file(os.path.join(path, '.gitignore'))
 
     # Note: Create HTML file require project directory is created.
     if is_args:
-        create_html_file(os.path.join(project_dir, 'index.html'), title=project_dir)
+        create_file(os.path.join(project_dir, 'index.html'), 
+                    DEFAULT_INDEX_HTML.format(project_dir))
     else:
-        create_html_file(os.path.join(project_dir, 'index.html'))
+        create_file(os.path.join(project_dir, 'index.html'), 
+                    DEFAULT_INDEX_HTML.format(DEFAULT_TITLE_NAME))
+
+    create_file(os.path.join(project_dir, 'css/style.css'), DEFAULT_STYLE_CSS)
+    create_file(os.path.join(project_dir, 'css/reset.css'), DEFAULT_RESET_CSS)
+    create_file(os.path.join(project_dir, 'css/fonts.css'))
+
+
