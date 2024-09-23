@@ -12,11 +12,13 @@
 /* Reset */
 @import url('reset.css');
 
+/* Default */
+/* font-style: normal; font-style is inherited */
+/* font-weight: 400;  font-weight is inherited */
+
 body {
 	font-family: "IBM Plex Sans", sans-serif;
 	font-size: 18px;
-	font-weight: 400;
-	font-style: normal;
 	line-height: 1.5;
 }
 
@@ -38,7 +40,6 @@ footer {
 	color: rgb(81, 17, 185);
 	font-style: italic; /* font-style: normal;*/
 	font-size: 34px;
-	font-weight: 400;
 	line-height: 2;
 	text-shadow: 1px -1px 2px rgb(239, 172, 17); /* offset-x | offset-y | blur-radius | color */
 	text-transform: capitalize;
@@ -51,8 +52,6 @@ footer {
 
 .main__title {
 	font-family: "Syne Tactile", system-ui;
-	font-weight: 400;
-	font-style: normal;
 	font-size: 24px;
 	color: brown;
 	line-height: 1.8;
@@ -62,8 +61,7 @@ footer {
 /* Personal Portfolio */
 .personal-portfolio {
 	font-family: "Work Sans";
-	font-style: normal;
-	font-weight: 400;  /* Work Sans Regular is used most often (57 times) */
+	/* font-weight: 400;  Work Sans Regular is used most often (57 times) */
 }
 
 .personal-portfolio p {
@@ -83,8 +81,6 @@ footer {
 /* Landing Page Template */
 .landing-page-template {
 	font-family: "Roboto", sans-serif; /* font-family is inherited */
-	font-style: normal; /* font-style is inherited */
-	font-weight: 400;  /* font-weight is inherited */
 }
 
 .landing-page-template p {
@@ -105,14 +101,12 @@ footer {
 /* Business Presentation */
 .business-presentation {
 	font-family: "DM Sans", sans-serif;
-	font-style: normal;
 	font-weight: 700;   /* DM Sans Bold is used most often (58 times) */
 }
 
 .business-presentation p {
 	color: #474464;
 	font-size: 24px;
-	font-weight: 400;
 	line-height: 1.75; /* 175% */
 }
 
