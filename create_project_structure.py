@@ -138,7 +138,7 @@ if __name__ == '__main__':
     # Note: Create HTML file require project directory is created.
     if is_args:
         create_file(os.path.join(project_dir, 'index.html'), 
-                    DEFAULT_INDEX_HTML.format(project_dir))
+                    DEFAULT_INDEX_HTML.format(project_dir.capitalize()))
     else:
         create_file(os.path.join(project_dir, 'index.html'), 
                     DEFAULT_INDEX_HTML.format(DEFAULT_TITLE_NAME))
