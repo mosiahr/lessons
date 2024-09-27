@@ -6,10 +6,38 @@
 /* Reset */
 @import url('reset.css');
 
-.landing-page {
+body {
     font-family: Roboto, sans-serif;
+}
+
+.header__title {
+    color: #091133;
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.32;
+    margin-block-end: 20px;
+    text-align: center;
+}
+
+/* Landing */
+.landing {
+    margin-block-end: 20px;
     margin-inline: auto;
+    max-width: 1200px;
+    padding-inline: 10px;
+    text-align: center;
+    word-spacing: 20px;
+}
+
+/* Landing Page */
+.landing-page {
+    display: inline-block;
+    margin-block-end: 20px;
     max-width: 539px;
+    text-align: left;
+    vertical-align: top;
+    word-spacing: normal;
 }
 
 .landing-page__text-block {
@@ -27,9 +55,12 @@
 
 .text-block__text {
     color: #505F98;
-    font-size: 18px;
     line-height: 1.67;
     margin-block-end: 18px;
+}
+
+.landing-page .text-block__text {
+    font-size: 18px;
 }
 
 .landing-page__buttons {
@@ -59,4 +90,65 @@
 .landing-page__button-light {
     border-color: #091133;
     color: #091133;
+}
+
+/* Landing Page Sectoin */
+.landing-page-section {
+    display: inline-block;
+    margin-inline: auto;
+    max-width: 520px;
+    text-align: left;
+    word-spacing: normal;
+}
+
+.landing-page-section__text-block{
+    margin-block-end: 71px;
+}
+
+.landing-page-section .text-block__header {
+    font-size: 36px;
+    letter-spacing: normal;
+    line-height: 1.33;
+    margin-block-end: 16px;
+}
+
+.landing-page-section .text-block__text {
+    color: #6F7CB2;
+    line-height: 1.62;
+    margin-block-end: 18px;
+}
+
+.landing-page-section__cards {
+    margin-inline-end: -35px;
+}
+
+.landing-page-section__card {
+    display: inline-block;
+    margin-block-end: 30px;
+    max-height: 138px;
+    max-width: 275px;
+    padding-inline-end: 30px;
+}
+
+.card-icon {
+    margin-block-end: 14px;
+}
+
+.card-title {
+    color: #091133;
+    font-weight: 500;
+    line-height: 1.62;
+    margin-block-end: 6px;
+}
+
+.card-body {
+    color: #5D6970;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.footer {
+    font-weight: 500;
+    padding-block: 20px;
+    text-align: center;
 }
