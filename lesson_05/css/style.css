@@ -1,5 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500);
+
 /* Local fonts */
 @import url('fonts.css');
 
 /* Reset */
 @import url('reset.css');
+
+.landing-page {
+    font-family: Roboto, sans-serif;
+    margin-inline: auto;
+    max-width: 539px;
+}
+
+.landing-page__text-block {
+    margin-block-end: 69px;
+}
+
+.text-block__header {
+    color: #091133;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.32;
+    margin-block-end: 20px;
+}
+
+.text-block__text {
+    color: #505F98;
+    font-size: 18px;
+    line-height: 1.67;
+    margin-block-end: 18px;
+}
+
+.landing-page__buttons {
+}
+
+.landing-page__button {
+    border: 2px solid;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 36px;
+    line-height: 1.625;
+    min-width: 189px;
+    padding-block: 5px;
+    text-align: center;
+}
+
+.landing-page__button-dark {
+    background-color: #111B47;
+    border-color: #111B47;
+    color: #FFF;
+    margin-block: 5px;
+    margin-inline-end: 30px;
+}
+
+.landing-page__button-light {
+    border-color: #091133;
+    color: #091133;
+}
