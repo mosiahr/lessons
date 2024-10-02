@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700);
 
+@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
 /* Local fonts */
 @import url('fonts.css');
 
@@ -7,13 +9,22 @@
 @import url('reset.css');
 
 body {
-    font-family: Manrope, sans-serif;
+    font-family: Epilogue, sans-serif;
+}
+img {
+	max-width: 100%;
 }
 
 .wrapper {
     min-height: 100%;
     overflow: hidden;
-    background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
+}
+
+.wrapper-background {
+    min-height: 100%;
+    overflow: hidden;
+
+background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
     linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 
@@ -31,7 +42,6 @@ body {
 .page {
     margin-inline-end: -50px;
     text-align: center;
-    vertical-align: middle;
 }
 
 .circle-bitmap {
@@ -76,13 +86,84 @@ body {
 }
 
 .footer {
-    bottom: 0;
-    color: #F4F18A;
     font-weight: 700;
-    left: 0;
     padding-block: 20px;
-    position: fixed;
     text-align: center;
-    text-shadow: 2px 2px 10px #42315B;
-    width: 100%;
+}
+.footer .container {
+	margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
+
+/* Light Template */
+.section-features {
+    background-color: #FDF0E9;
+}
+.section-features .container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+
+    /* 1170 + 2*15px = 1200px */
+}
+
+.section-features .portfolio {
+    font-size: 0;
+	padding-block: 50px;
+    /* 470(text) + 171(margin) + 529(img) = 1170px */
+}	
+
+.section-features .portfolio-text {
+    display: inline-block;
+    margin-inline-end: 171px;
+	vertical-align: middle;
+
+}
+
+.section-features .portfolio h5 {
+    color: #EF6D58;
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 2;
+    margin-block-end: 20px;
+    text-transform: uppercase;
+}
+
+.section-features .portfolio .header {
+    color: #391400;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.14;
+    margin-block-end: 26px;
+    max-inline-size: 397px;
+}
+
+.section-features .portfolio p {
+    color: #391400;
+    font-size: 20px;
+    line-height: 1.6;
+    margin-block-end: 24px;
+    max-width: 470px;
+}
+
+.section-features .portfolio .list {
+}
+
+.section-features .portfolio .list__item {
+    background: url("../img/check.svg") left top / 32px no-repeat;
+    color:  rgba(57, 20, 0, 0.64);
+    font-size: 16px;
+    line-height: 2;
+    margin-block-end: 16px;
+    padding-block-start: 2px;
+    padding-inline-start: 48px;
+    vertical-align: middle;
+}
+
+.section-features .portfolio-img {
+    display: inline-block;
+    max-inline-size: 529px;
+    vertical-align: middle;
 }
