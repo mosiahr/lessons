@@ -18,9 +18,14 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
 </head>
 
 <body>
-   <header></header>
-   <main></main>
-   <footer></footer>
+   <div class="wrapper">
+      <header class="header">
+      </header>
+      <main class="page">
+      </main>
+      <footer class="footer">
+      </footer>
+   </div>
 </body>
 
 </html>'''
@@ -31,6 +36,11 @@ DEFAULT_STYLE_CSS = \
 
 /* Reset */
 @import url('reset.css');
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
 '''
 
 DEFAULT_RESET_CSS = \
