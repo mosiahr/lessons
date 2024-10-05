@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700);
 
-@import url(https://fonts.googleapis.com/css?family=Epilogue:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
 
 /* Local fonts */
 @import url('fonts.css');
@@ -12,7 +12,7 @@ body {
     font-family: Epilogue, sans-serif;
 }
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 .wrapper {
@@ -20,11 +20,10 @@ img {
     overflow: hidden;
 }
 
-.wrapper-background {
-    min-height: 100%;
-    overflow: hidden;
-
-background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
+/** HEADER **/
+.header {
+    min-block-size: 1050px;
+    background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
     linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 
@@ -39,6 +38,7 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     text-align: center;
     text-shadow: 2px 2px 5px #42315B;
 }
+
 .page {
     margin-inline-end: -50px;
     text-align: center;
@@ -85,18 +85,7 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     color: #0F0F0F;
 }
 
-.footer {
-    font-weight: 700;
-    padding-block: 20px;
-    text-align: center;
-}
-.footer .container {
-	margin-inline: auto;
-    max-inline-size: 1200px;
-    padding-inline: 15px;
-}
-
-/* Light Template */
+/** LIGHT TEMPLATE **/
 .section-features {
     background-color: #FDF0E9;
 }
@@ -105,20 +94,20 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     max-inline-size: 1200px;
     padding-inline: 15px;
 
-    /* 1170 + 2*15px = 1200px */
+    /*! 1170 + 2*15px = 1200px */
 }
 
 .section-features .portfolio {
     font-size: 0;
-	padding-block: 50px;
-    /* 470(text) + 171(margin) + 529(img) = 1170px */
+    padding-block: 50px;
+
+    /*! 470(text) + 171(margin) + 529(img) = 1170px */
 }	
 
 .section-features .portfolio-text {
     display: inline-block;
     margin-inline-end: 171px;
-	vertical-align: middle;
-
+    vertical-align: middle;
 }
 
 .section-features .portfolio h5 {
@@ -130,7 +119,7 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     text-transform: uppercase;
 }
 
-.section-features .portfolio .header {
+.portfolio-text__header {
     color: #391400;
     font-size: 56px;
     font-weight: 800;
@@ -166,4 +155,84 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     display: inline-block;
     max-inline-size: 529px;
     vertical-align: middle;
+}
+
+/** DARK TEMPLATE **/
+.section-cinema {
+    background-color: #141414;
+}
+
+.cinema-background {
+    min-block-size: 860px;
+
+background: url("../img/abstract_button.png") center / 470px no-repeat,
+    url("../img/cinema.png") center / cover no-repeat,
+    url("../img/gradient.png") center / cover no-repeat;
+}
+
+.section-cinema .container {
+    margin-inline: auto;
+    max-inline-size: 1596px;
+    padding-inline: 15px;
+}
+
+.cinema-block {
+    font-family: Manrope, sans-serif;
+    margin-block-start: -58px;
+    margin-inline: auto;
+    max-inline-size: 1096px;
+    padding-block-end: 50px;
+    text-align: center;
+}
+
+.cinema-text__title {
+    color: #FFF;
+    font-size: 58px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-block-end: 14px;
+}
+
+.cinema-text__text {
+    color: #999;
+    display: block;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-block-end: 180px;
+}
+
+.cinema-text__button {
+    background: #E50000;
+    border-radius: 8px;
+    display: inline-block;
+    min-inline-size: 210px;
+    padding-block: 18px;
+    padding-inline: 24px;
+    text-align: center;
+}
+
+.cinema-text__button span {
+    background: url("../img/button_icon.svg") top left / 28px no-repeat;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    min-block-size: 28px;
+    padding-inline-start: 32px;
+
+    /*! 28 + 4 = 32 */
+}
+
+/** FOOTER **/
+.footer {
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    color: #F4F18A;
+    font-weight: 700;
+    padding-block: 20px;
+    text-align: center;
+}
+.footer .container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
 }
