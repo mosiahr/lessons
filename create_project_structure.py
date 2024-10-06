@@ -24,6 +24,9 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
       <main class="page">
       </main>
       <footer class="footer">
+         <div class="container">
+            <span>© 2024 Greg</span>
+         </div>
       </footer>
    </div>
 </body>

@@ -1,0 +1,91 @@
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/** HEADER **/
+.header {
+    min-block-size: 1050px;
+    background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
+	linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+}
+
+.header__title {
+    color: #F4F18A;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.32;
+    margin-block-end: 100px;
+    padding-block-start: 5px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #42315B;
+}
+
+.header__nav {
+    margin-inline-end: -50px;
+    text-align: center;
+}
+
+.circle-bitmap {
+    background-image: url("../img/Bitmap.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 3px solid #F4F18A;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    width: 100px;
+}
+
+.circle {
+    background-color: #7a956b;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: 700;
+    margin-block-end: 50px;
+    margin-inline-end: 50px;
+    min-height: 300px;
+    min-width: 300px;
+    padding-block-start: calc(300px/2 - 18px);
+    vertical-align: middle;
+}
+
+.freelancer-life-style {
+    background: url("../img/logo.webp") center / 270px no-repeat;
+    box-shadow: 0px 0px 0px 1px #0F0F0F;
+}
+
+.dark {
+    background-color: #0F0F0F;
+    color: #FFF;
+}
+.light {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 1px #0F0F0F;
+    color: #0F0F0F;
+}
+
+
+
+/** FOOTER **/
+.footer {
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    color: #F4F18A;
+    font-weight: 700;
+    padding-block: 20px;
+    text-align: center;
+}
+.footer .container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
