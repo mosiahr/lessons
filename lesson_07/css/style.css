@@ -12,8 +12,9 @@
 /** HEADER **/
 .header {
     min-block-size: 1050px;
-    background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
-	linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+
+background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed, 
+    linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 
 .header__title {
@@ -74,6 +75,218 @@
     color: #0F0F0F;
 }
 
+/** GAME **/
+.page {
+}
+.section-game {
+    background: url('../img/space_background.jpg') 0 0 / cover no-repeat;
+}
+.container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
+.game {
+    block-size: 800px;
+    text-align: center;
+}
+.game__header {
+    color: #FDBB2D;
+    font-size: 32px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.folder {
+    block-size: 800px;
+    font-size: 0;
+    text-align: left;
+    white-space: nowrap;
+	padding: 10px;
+}
+/* .folder:hover .game-over-message{
+	visibility: visible;
+} */
+.folder__circle {
+    border: 3px solid #F4F18A;
+    border-radius: 50%;
+    color: #F4F18A;
+    font-size: 18px;
+    font-weight: 700;
+    height: 60px;
+    width: 60px;
+    padding-block-start: calc(60px/2 - 18px/2 - 2px);
+    text-align: center;
+    vertical-align: middle;
+}
+.folder__circle:hover {
+    background-color: #42315B;
+}
+
+.star-way-horizontal {
+    background: #3A1C71 url('../img/star-24.png') 0 center repeat-x;
+    block-size: 48px;
+	padding: 20px;
+}
+.star-way-vertical {
+    background: #3A1C71 url('../img/star-24.png') center 0 repeat-y;
+    inline-size: 48px;
+	padding: 20px;
+}
+.arrow::before {
+	content: "";
+	width: 60px;
+	height: 60px;
+	display: none;
+}
+.arrow-right::before {
+	background: url('../img/arrow-right.png') 0 0 no-repeat;
+	margin-block-start: 20px;
+}
+.arrow-left::before {
+	background: url('../img/arrow-left.png') 0 0 no-repeat;
+	margin-block-start: 20px;
+	margin-inline-start: 60px;
+}
+.arrow-down::before {
+	background: url('../img/arrow-down.png') 0 0 no-repeat;
+	margin-inline-start: -60px;
+	margin-block-start: 30px;
+}
+.arrow-up::before {
+	background: url('../img/arrow-up.png') 0 0 no-repeat;
+	margin-inline-start: -60px;
+	margin-block-start: 20px;
+}
+
+.arrow-right:hover::before,
+.arrow-left:hover::before,
+.arrow-down:hover::before,
+.arrow-up:hover::before {
+	display: block;
+}
+.stars-block-1 {
+	margin-inline-start: -5px;
+	margin-block-end: -5px;
+	display: block;
+}
+.stars-block-2 {
+    block-size: 144px;
+	display: inline-block;
+}
+
+.stars-block-3 {
+    inline-size: 192px;
+	display: inline-block;
+}
+
+.stars-block-4 {
+	inline-size: 192px;
+	display: inline-block;
+}
+.stars-block-5 {
+	inline-size: 240px;
+	display: inline-block;
+}
+.stars-block-6 {
+	inline-size: 192px;
+	display: inline-block;
+}
+.stars-block-7 {
+	block-size: 144px;
+	display: inline-block;
+	margin-block-start: -96px;
+}
+.stars-block-8 {
+	inline-size: 144px;
+	display: inline-block;
+	margin-block-end: 96px;
+}
+.stars-block-9 {
+	block-size: 144px;
+	display: inline-block;
+}
+.stars-block-10 {
+	block-size: 96px;
+	margin-inline-start: 1056px;
+	/* display: inline-block; */
+}
+
+.stars-block-11 {
+	inline-size: 240px;
+	margin-inline-start: 864px;
+}
+
+.stars-block-12 {
+	block-size: 96px;
+	margin-inline-start: 864px;
+	display: inline-block;
+
+}
+.stars-block-13 {
+	inline-size: 912px;
+}
+.stars-block-14 {
+	block-size: 96px;
+	display: inline-block;
+}
+.stars-block-15 {
+	inline-size: 96px;
+	display: inline-block;
+}
+.stars-block-16 {
+	inline-size: 192px;
+	display: inline-block;
+}
+.stars-block-17 {
+	inline-size: 336px;
+	display: inline-block;
+}
+.stars-block-18 {
+	inline-size: 336px;
+	display: inline-block;
+}
+.stars-block-19 {
+	block-size: 96px;
+	display: inline-block;
+	margin-block-end: -48px;
+}
+.stars-block-20 {
+	margin-inline-start: 1003px;
+	margin-block-start: 43px;
+	display: block;
+}
+.stars-block-21 {
+	display: inline-block;
+	margin-inline-start: 360px;
+	margin-block-start: -400px;
+}
+
+.message-win {
+	display: inline-block;
+    background-color: #3A1C71;
+	padding: 20px;
+	color: #0F0F0F;
+	font-size: 36px;
+    font-weight: 700;
+	vertical-align: top;
+	visibility: hidden;
+	margin-inline-start: 360px;
+	margin-block-start: -400px;
+	text-align: center;
+    color: #FDBB2D;
+}
+.message-win p{
+	font-size: 24px;
+}
+
+[class*="stars-block"]:not(:first-child) {
+    visibility: hidden;
+}
+
+[class*="stars-block"]:hover, [class*="stars-block"]:hover + [class*="stars-block"] {    
+	visibility: visible;
+}
 
 
 /** FOOTER **/
