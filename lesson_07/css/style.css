@@ -6,6 +6,10 @@
 /* Reset */
 @import url('reset.css');
 
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -76,11 +80,11 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     background-color: #42315B;
 }
 
-.busines-presentation-link {
-	background-color: #edebff;
-	color: #4A3AFF;
+.timeline-link {
+    background-color: #edebff;
+    color: #4A3AFF;
 }
-.busines-presentation-link:hover {
+.timeline-link:hover {
     background-color: #e1defc;
 }
 
@@ -104,8 +108,8 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
 }
 .game {
     block-size: 840px;
+    padding-block: 20px;
     text-align: center;
-	padding-block: 20px;
 }
 .game__header {
     color: #FDBB2D;
@@ -301,16 +305,18 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     visibility: visible;
 }
 
-/** Business Presentation Template **/
+/** TIMELINE **/
+.section-timeline {
+    /* display: none; */
+}
 .timeline {
-    font-family: "DM Sans";
-	padding-block: 50px;
+    padding-block: 50px;
 }
 .timeline__item {
     inline-size: 630px;
 }
 .timeline__item > *:not(:last-child) {
-	margin-block-end: 8px;
+    margin-block-end: 8px;
 }
 .timeline__date {
     color: #4A3AFF;
@@ -325,15 +331,14 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     line-height: 1.29;
 }
 [class^="timeline__header"]::after {
-	content: "";
-	block-size: 46px;
-	inline-size: 46px;
-	margin-inline-start: 5px;
-	vertical-align: top;
+    block-size: 46px;
+    content: "";
+    inline-size: 46px;
+    margin-inline-start: 5px;
+    vertical-align: top;
 }
 .timeline__header-1::after {
     background: url('../img/dandruff.png') center / 46px no-repeat;
-	
 }
 .timeline__header-2::after {
     background: url('../img/laptop.png') center / 46px no-repeat;
@@ -347,7 +352,92 @@ background:  url("../img/Yevhen.webp") right 5px / contain no-repeat fixed,
     line-height: 1.75;
 }
 .timeline__item:not(:last-child) {
-	margin-block-end: 54px;
+    margin-block-end: 54px;
+}
+
+/** PRICING PLAN **/
+.section-pricing-plan {
+}
+.container-pricing-plan {
+    margin-block: 0px;
+    margin-inline: auto;
+    max-inline-size: 1708px;
+	padding-inline: 15px;
+
+    /*! 1920 - 106 * 2 = 1708 */
+}
+.pricing-plan {
+    padding-block: 106px;
+}
+.pricing-plan__header {
+    color: #1E1B39;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 1.08;
+    margin-block-end: 50px;
+}
+.pricing-plan__cards {
+}
+.pricing-plans__card {
+    background: #F0F0F6;
+    border-radius: 56px;
+    padding-block: 24px 58px;
+    padding-inline: 24px;
+    width: 543px;
+	display: inline-block;
+	margin-block-end: 39.5px;
+}
+.pricing-plans__card:not(:last-child) {
+	margin-inline-end: 39.5px;
+}
+.pricing-plans__card-header {
+    background: #4A3AFF;
+    border-radius: 34px;
+    margin-block-end: 34px;
+    padding-block: 45px;
+    text-align: center;
+}
+.pricing-plans__card-header-title {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.07;
+    margin-block-end: 2px;
+    opacity: 0.9;
+}
+.pricing-plans__card-header-price {
+    color: #FFF;
+    font-size: 116px;
+    font-weight: 700;
+    line-height: 1.03;
+    margin-block-end: 6px;
+}
+.pricing-plans__card-header-billing {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    opacity: 0.6;
+}
+
+.pricing-description__items {
+    color: #1E1B39;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.36;
+}
+.pricing-description__item {
+}
+.pricing-description__item::before {
+    background: url("../img/check_circle.svg") top / 36px no-repeat;
+    content: "";
+    height: 36px;
+    margin-inline-end: 14px;
+    vertical-align: top;
+    width: 36px;
+}
+.pricing-description__item:not(:last-child) {
+    margin-block-end: 26px;
 }
 
 /** FOOTER **/
