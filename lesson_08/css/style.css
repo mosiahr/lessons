@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+body {
+    font-family: "Epilogue", sans-serif;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+/** HEADER **/
+.header {
+    min-block-size: 500px;
+    padding-block-start: 20px;
+    text-align: center;
+	background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
+    url("../img/header/laptop3x.webp") 25% 70% / 246px auto no-repeat,
+    url("../img/header/star-block.svg") 10% 10% / 246px no-repeat,
+    url("../img/header/cloud.svg") center 92% / 282px no-repeat,
+	url("../img/header/arrow-shape.svg")  95% 95% / 194px 89px no-repeat,
+    linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+}
+
+.header__title {
+    color: #F4F18A;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.32;
+    margin-block-end: 50px;
+    text-shadow: 2px 2px 5px #42315B;
+}
+.header__title h1 {
+    margin-block-end: 20px;
+    text-transform: capitalize;
+}
+.header__title h2 {
+    font-size: 36px;
+    margin-block-end: 140px;
+    text-transform: uppercase;
+}
+.header__title ul {    
+    /* text-align: end; */
+}
+.header__title li {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.header img {
+    padding-block-start: 20px;
+}
+
+.circle-bitmap {
+    background-image: url("../img/header/girl-oranges.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 3px solid #F4F18A;
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    width: 100px;
+}
+
+/** HOMEWORK **/
+.section-homework8 {
+    background: url("../img/header/arrow-shape.svg") 97% bottom / 194px 89px no-repeat,
+	linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    /* padding-block: 20px; */
+}
+.container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
+.homework8 {
+    font-size: 24px;
+    font-weight: 700px;
+    text-align: center;
+
+    /* line-height: 2; */
+}
+
+.icons, 
+.design-elements {
+    background: #fdf0e9;
+    border-end-end-radius: 250px;
+    color: #391400;
+    margin-block-end: 10px;
+    margin-inline-end: 10px;
+	padding-block-end: 30px;
+}
+.title {
+    background: #F9E5DA;
+    background: url("../img/design_elements/rectangle.svg") 0 0 / 312px 168px no-repeat;
+    font-size: 36px;
+    font-weight: 800px;
+    line-height: 1.6;
+    line-height: 2;
+    padding-block: 20px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.icons__icon-1 {
+    line-height: 2;
+}
+.icons__icon-1 img,
+.icons__icon-2 img, 
+.icons__icon-3 img {
+    height: 48px;
+    width: 48px;
+}
+.icons__icon-2 div, 
+.icons__icon-3 div {
+    background-color: #EF6C57;
+    block-size: 112px;
+    border-radius: 50%;
+    inline-size: 112px;
+    line-height: 1;
+    padding-block-start: 32px;
+    text-align: center;
+}
+.icons__icon-4 img,
+.icons__icon-6 img {
+    height: 148px;
+    width: 148px;
+}
+.icons__icon-5 img {
+    height: 80px;
+    width: 100px;
+}
+
+h3 {
+    margin-inline-start: 20px;
+}
+[class^="icons__icon"] div,
+[class^="design-elements__el"] div,
+[class^="content-image"] div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.title,
+[class^="icons__icon"]:not(:last-child),
+[class^="design-elements__el"]:not(:last-child),
+[class^="content-images__el"]:not(:last-child) {
+    margin-block-end: 30px;
+}
+.design-elements__el-1 {
+}
+.design-elements__el-1 img {
+    height: 80px;
+    width: 100px;
+}
+.content-images {
+    background-color: #42315B;
+    border-end-end-radius: 250px;
+    color: #edebff;
+    padding-block-end: 30px;
+}
+.content-images__el-7 img,
+.content-images__el-8 img {
+	border-radius: 6px;
+	max-width: 340px;
+}
+.description {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/** FOOTER **/
+/* [id]:not(:last-child) {
+    display: none;
+} */
+.footer {
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    color: #F4F18A;
+    font-weight: 700;
+    padding-block: 20px;
+    text-align: center;
+}
+.footer .container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
