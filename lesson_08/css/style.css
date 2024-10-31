@@ -9,6 +9,9 @@
 body {
     font-family: "Epilogue", sans-serif;
 }
+h3 {
+    margin-inline-start: 20px;
+}
 .wrapper {
     min-height: 100%;
     overflow: hidden;
@@ -19,11 +22,12 @@ body {
     min-block-size: 500px;
     padding-block-start: 20px;
     text-align: center;
-	background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
+
+background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
     url("../img/header/laptop3x.webp") 25% 70% / 246px auto no-repeat,
     url("../img/header/star-block.svg") 10% 10% / 246px no-repeat,
     url("../img/header/cloud.svg") center 92% / 282px no-repeat,
-	url("../img/header/arrow-shape.svg")  95% 95% / 194px 89px no-repeat,
+    url("../img/header/arrow-shape.svg")  95% 95% / 194px 89px no-repeat,
     linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 
@@ -45,12 +49,12 @@ body {
     margin-block-end: 140px;
     text-transform: uppercase;
 }
-.header__title ul {    
-    /* text-align: end; */
-}
 .header__title li {
     font-size: 24px;
     text-transform: capitalize;
+}
+.header__title a:hover {
+    text-decoration: underline;
 }
 .header img {
     padding-block-start: 20px;
@@ -67,12 +71,15 @@ body {
     vertical-align: middle;
     width: 100px;
 }
+.circle-bitmap:hover {
+    box-shadow: 0px 0px 10px #F4F18A;
+}
 
 /** HOMEWORK **/
 .section-homework8 {
+
     background: url("../img/header/arrow-shape.svg") 97% bottom / 194px 89px no-repeat,
-	linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
-    /* padding-block: 20px; */
+    linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
 }
 .container {
     margin-inline: auto;
@@ -83,8 +90,10 @@ body {
     font-size: 24px;
     font-weight: 700px;
     text-align: center;
-
-    /* line-height: 2; */
+}
+.homework8 > img:first-child {
+    margin-block-end: 10px;
+	border-end-end-radius: 50px;
 }
 
 .icons, 
@@ -94,7 +103,7 @@ body {
     color: #391400;
     margin-block-end: 10px;
     margin-inline-end: 10px;
-	padding-block-end: 30px;
+    padding-block-end: 30px;
 }
 .title {
     background: #F9E5DA;
@@ -109,6 +118,16 @@ body {
 }
 .icons__icon-1 {
     line-height: 2;
+}
+.icons__icon-1 svg {
+    height: 48px;
+    width: 48px;
+	vertical-align: middle;
+}
+.icons__icon-1:hover svg path:nth-of-type(1),
+.icons__icon-1:hover svg path:nth-of-type(2),
+.icons__icon-4:hover circle {
+	stroke: #db4a34;
 }
 .icons__icon-1 img,
 .icons__icon-2 img, 
@@ -126,18 +145,33 @@ body {
     padding-block-start: 32px;
     text-align: center;
 }
-.icons__icon-4 img,
-.icons__icon-6 img {
+.icons__icon-2:hover div,
+.icons__icon-3:hover div {
+    background-color: #db4a34;
+}
+.icons__icon-4:hover path,
+.icons__icon-5:hover path:first-child,
+.icons__icon-6:hover circle {
+    fill: #db4a34;
+}
+.icons__icon-4 svg {
     height: 148px;
     width: 148px;
+	vertical-align: middle;
 }
 .icons__icon-5 img {
     height: 80px;
     width: 100px;
 }
-
-h3 {
-    margin-inline-start: 20px;
+.icons__icon-5 svg {
+	height: 148px;
+    width: 148px;
+	vertical-align: middle;
+}
+.icons__icon-6 svg {
+	width: 160px;
+	height: 48px;
+	vertical-align: middle;
 }
 [class^="icons__icon"] div,
 [class^="design-elements__el"] div,
@@ -151,11 +185,19 @@ h3 {
 [class^="content-images__el"]:not(:last-child) {
     margin-block-end: 30px;
 }
-.design-elements__el-1 {
-}
-.design-elements__el-1 img {
+.design-elements__el-1 svg {
     height: 80px;
     width: 100px;
+    vertical-align: middle;
+}
+.design-elements__el-1:hover path,
+.design-elements__el-2:hover path {
+	fill: #B550F8;
+}
+.design-elements__el-2 svg {
+    height: 242px;
+    width: 282px;
+    vertical-align: middle;
 }
 .content-images {
     background-color: #42315B;
@@ -165,8 +207,8 @@ h3 {
 }
 .content-images__el-7 img,
 .content-images__el-8 img {
-	border-radius: 6px;
-	max-width: 340px;
+    border-radius: 6px;
+    max-width: 340px;
 }
 .description {
     display: inline-block;
