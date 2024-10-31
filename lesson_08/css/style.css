@@ -88,7 +88,7 @@ background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
 }
 .homework8 {
     font-size: 24px;
-    font-weight: 700px;
+    font-weight: 700;
     text-align: center;
 }
 .homework8 > img:first-child {
@@ -109,7 +109,7 @@ background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
     background: #F9E5DA;
     background: url("../img/design_elements/rectangle.svg") 0 0 / 312px 168px no-repeat;
     font-size: 36px;
-    font-weight: 800px;
+    font-weight: 800;
     line-height: 1.6;
     line-height: 2;
     padding-block: 20px;
