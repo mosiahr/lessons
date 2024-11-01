@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+body {
+    font-family: "Epilogue", sans-serif;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    background: #28293E url("../img/icons/star.svg") 413px 42px no-repeat;
+}
+.header__container {
+    margin: 0 auto;
+    max-inline-size: 1170px;
+    padding-block: 20px;
+}
+.header__section {
+    max-inline-size: 513px;
+}
+.section-header {
+}
+.section-header__label {
+    color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    margin-block-end: 24px;
+    text-transform: uppercase;
+}
+.section-header__title {
+    color: #FFF;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.11;
+    margin-block-end: 24px;
+    text-transform: capitalize;
+}
+.section-header__text {
+    color: rgba(255, 255, 255, 0.64);
+    line-height: 2;
+    margin-block-end: 24px;
+}
+.section-header__text :not(:last-child) {
+    margin-block-end: 24px;
+}
+.section-header__text ul li {
+    line-height: 2;
+    vertical-align: middle;
+}
+.section-header__text ul li::before {
+    background: url("../img/icons/check.svg") 0 0 / 32px no-repeat;
+    content: "";
+    height: 32px;
+    margin-block-start: -2px;
+    margin-inline-end: 16px;
+    vertical-align: middle;
+    width: 32px;
+}
+
+.page {
+}
+.page__container {
+}
+
+/** FOOTER **/
+/* [id]:not(:last-child) {
+    display: none;
+} */
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    padding-block: 20px;
+    text-align: center;
+}
+.footer__container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+}
