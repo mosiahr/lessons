@@ -175,7 +175,8 @@ background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
 }
 [class^="icons__icon"] div,
 [class^="design-elements__el"] div,
-[class^="content-image"] div {
+[class^="content-image"] div,
+[class^="content-image"] svg {
     display: inline-block;
     vertical-align: middle;
 }
@@ -204,6 +205,11 @@ background: url("../img/header/man3x.webp") 80% 60% / 246px auto no-repeat,
     border-end-end-radius: 250px;
     color: #edebff;
     padding-block-end: 30px;
+}
+.content-images__el-6 svg {
+	height: 192px;
+    width: 338px;
+    vertical-align: middle;
 }
 .content-images__el-7 img,
 .content-images__el-8 img {
