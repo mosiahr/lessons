@@ -20,12 +20,25 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
 <body>
    <div class="wrapper">
       <header class="header">
+         <div class="header__container">
+         </div>
       </header>
       <main class="page">
+         <div class="page__container">
+            <div class="page__">
+
+			</div>
+			<div class="page__">
+
+			</div>
+			<div class="page__">
+
+			</div>
+		 </div>
       </main>
       <footer class="footer">
-         <div class="container">
-            <span>© 2024 Greg</span>
+         <div class="footer__container">
+            <span>© 2024 Gregory</span>
          </div>
       </footer>
    </div>
