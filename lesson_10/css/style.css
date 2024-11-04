@@ -1,10 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
 /* Local fonts */
 @import url('fonts.css');
 
 /* Reset */
 @import url('reset.css');
 
+body {
+    font-family: "Epilogue", sans-serif;
+}
+
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+}
+
+.header {
+    background: #28293E url("../img/icons/star.svg") 413px 42px no-repeat;
+    color: #FFF;
+}
+.header__container {
+    margin: 0 auto;
+    max-inline-size: 1170px;
+    padding-block-start: 16px;
+}
+.header__menu {
+    margin-block-end: 124px;
+}
+.menu {
+    text-align: justify;
+    vertical-align: middle;
+}
+.menu__logo {
+    margin-inline-end: 176px;
+}
+.logo {
+    display: inline-block;
+}
+.logo__img {
+    height: 48px;
+    margin-inline-end: 14px;
+    width: 48px;
+}
+.logo__name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33;
+    padding-block-start: 9px;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+.menu__list {
+    text-align: left;
+}
+.menu__item {
+    display: inline-block;
+    line-height: 2;
+    text-align: center;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+.menu__item:not(:last-child) {
+    margin-inline-end: 50px;
+}
+.menu__link {
+}
+.menu__button {
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 900;
+    min-block-size: 48px;
+    min-inline-size: 138px;
+    padding-block-start: 9px;
+    text-transform: uppercase;
+    vertical-align: middle;
+	padding-inline: 10px;
+}
+.menu__sub {
+}
+.sub-menu {
+}
+.sub-menu__item {
+}
+.sub-menu__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.sub-menu__link {
+}
+.header__block {
+}
+.block-header {
+}
+.block-header__label {
+}
+.block-header__title {
+}
+.block-header__text {
+}
+.block-header__links {
+}
+.block-header__button {
+}
+.block-header__link {
+}
+.block-header__quote {
+}
+.quote {
+}
+.quote__avatar {
+}
+.quote__text {
+}
+.quote__author {
+}
+.page {
+}
+.page__container {
+}
+.page__ {
+}
+
+/** FOOTER **/
+/* [id]:not(:last-child) {
+    display: none;
+} */
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    padding-block: 20px;
+    text-align: center;
+}
+.footer__container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
 }
