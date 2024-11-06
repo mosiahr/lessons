@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-    background: #28293E url("../img/icons/star.svg") 413px 42px no-repeat;
+    background-color: #28293E;
     color: #FFF;
 }
 .header__container {
@@ -115,6 +115,16 @@ body {
 }
 .block-header {
     max-inline-size: 513px;
+    position: relative;
+	z-index: 1;
+}
+.block-header__star {
+    height: 146px;
+    inset-inline-start: 278px;
+	inset-block-start: 22px;
+    position: absolute;
+    width: 148px;
+	z-index: -1;
 }
 .block-header__label {
     color: #EF6D58;
@@ -152,42 +162,42 @@ body {
     background: #ED5B44;
 }
 .block-header__link {
-	display: inline-block;
+    display: inline-block;
 }
 .block-header__quote {
-	max-inline-size: 470px;
-	font-size: 0;
+    font-size: 0;
+    max-inline-size: 470px;
 }
 .quote {
 }
 .quote__avatar {
-	margin-inline-end: 16px;
-	display: inline-block;
-	margin-block-start: 4px;
-	vertical-align: top;
+    display: inline-block;
+    margin-block-start: 4px;
+    margin-inline-end: 16px;
+    vertical-align: top;
 }
 .avatar {
-	border-radius: 50%;
-	overflow: hidden;
-	width: 48px;
-	height: 48px;
+    border-radius: 50%;
+    height: 48px;
+    overflow: hidden;
+    width: 48px;
 }
 .avatar__img {
 }
 .quote__text-block {
-	display: inline-block;
-	max-inline-size: 406px;
+    display: inline-block;
+    max-inline-size: 406px;
 }
 .quote__text {
-	color: rgba(255, 255, 255, 0.64);
-	line-height: 2;
-	font-size: 16px;
-	margin-block-end: -4px;
+    color: rgba(255, 255, 255, 0.64);
+    font-size: 16px;
+    line-height: 2;
+    margin-block-end: -4px;
 }
 .quote__author {
-	line-height: 2;
-	font-size: 16px;
-	margin-inline-start: 6px;
+    font-size: 16px;
+    line-height: 2;
+    margin-inline-start: 6px;
 }
 .page {
 }
