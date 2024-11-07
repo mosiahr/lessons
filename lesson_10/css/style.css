@@ -111,20 +111,29 @@ body {
 }
 .sub-menu__link {
 }
+
+.header__main {
+	font-size: 0;
+}
+
+/** HEADER BLOCK */
 .header__block {
+    display: inline-block;
+	position: relative;
+    z-index: 0;
+	margin-inline-end: 87px;
 }
 .block-header {
     max-inline-size: 513px;
-    position: relative;
-	z-index: 1;
+	font-size: 16px;
 }
 .block-header__star {
     height: 146px;
+    inset-block-start: 22px;
     inset-inline-start: 278px;
-	inset-block-start: 22px;
     position: absolute;
     width: 148px;
-	z-index: -1;
+    z-index: -1;
 }
 .block-header__label {
     color: #EF6D58;
@@ -199,6 +208,88 @@ body {
     line-height: 2;
     margin-inline-start: 6px;
 }
+
+/** IMG BLOCK */
+.header__img-block {
+	display: inline-block;
+	position: relative;
+    z-index: 0;
+}
+.block-img {
+    max-inline-size: 570px;
+	vertical-align: top;
+	width: 100%;
+}
+.block-img__dark-circle {
+    position: relative;
+	inset: 100px;
+	z-index: -1;
+}
+.circle-dark {
+    background: #32334C;
+    border-radius: 50%;
+    height: 370px;
+    width: 370px;
+}
+.block-img__laptop {
+	background-color: #B550F8;
+	border-radius: 50%;
+	height: 305px;
+	inline-size: 246px;
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	position: absolute;
+}
+.block-img__laptop img {
+	inline-size: 255px;
+	block-size: 265px;
+	/* margin-inline-start: 21px; */
+	position: relative;
+	inset-inline-start: 21px;
+	inset-block-start: 24px;
+}
+.block-img__stars {
+	width: 112px;
+	height: 112px;
+	background-color: #ED5B44;
+	border-radius: 50%;
+	text-align: center;
+	padding-block-start: 28px;
+	position: absolute;
+	inset-inline-start: 304px;
+	inset-block-start: 40px;
+}
+.block-img__stars img {
+	inline-size: 42px;
+	block-size: 56px;
+}
+.block-img__cloud {
+	position: absolute;
+	inset-block-start: 80px;
+	inset-inline-end: 0;
+}
+.block-img__girl {
+	position: absolute;
+	inset-block-start: 225px;
+	inset-inline-end: 0;
+}
+.block-img__arrow {
+	position: absolute;
+	inset-block-start: 554px;
+	inset-inline-end: 162px;
+}
+.block-img__card {
+	position: absolute;
+	inset-block-start: 431px;
+	inset-inline-start: 56px;
+}
+.block-img__wavy-arrow {
+	position: absolute;
+	inset-block-start: 339px;
+	inset-inline-start: 0;
+}
+
+
 .page {
 }
 .page__container {
