@@ -60,9 +60,14 @@ body {
 }
 .menu__item {
     display: inline-block;
+    position: relative;
 }
 .menu__item:not(:last-child) {
     margin-inline-end: 50px;
+}
+.menu__item:hover .menu__sub {
+	visibility: visible;
+	opacity: 1;
 }
 .menu__link {
 }
@@ -101,8 +106,15 @@ body {
     border-color: #FFF;
 }
 .menu__sub {
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: 100%;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s;
 }
 .sub-menu {
+	text-align: left;
 }
 .sub-menu__item {
 }
