@@ -103,7 +103,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.30);
 }
 .button--grey-border:hover {
-    border-color: #FFF;
+	background-color: #B550F8;
+	border-color: #28293E;
 }
 .menu__sub {
 	position: absolute;
