@@ -89,10 +89,12 @@ body {
 .car:hover .body-car__left::before{
     background: #82050f;
     transition: all 0.3s;
+	box-shadow: 0px 0px 10px 5px #82050f;
 }
 .car:hover .body-car__right::before{
     background: #f2e88c;
     transition: all 0.3s;
+	box-shadow: 0px 0px 5px 10px #f2e88c;
 }
 .car__body {
     font-size: 0;
@@ -175,6 +177,7 @@ body {
     right: 20px;
     width: 70px;
 	transform: rotate(10deg);
+
 }
 .body-car__windshield {
     background: #BF0116;
@@ -247,7 +250,8 @@ body {
 	z-index: 11;
 }
 .car__wheel::after {
-    background-color: #ccb3b5;
+	background: rgb(219,34,54);
+    background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(164,8,25,1) 100%);
     border-radius: 50%;
     content: "";
     height: 90px;
@@ -264,6 +268,16 @@ body {
 .car__wheel:last-child {
     bottom: -30px;
     right: 70px;
+}
+
+.car__rim-wheel {
+	background-color: #28293E;
+    border-radius: 50%;
+    height: 110px;
+    position: absolute;
+    width: 110px;
+	top: 20px;
+	left: 20px;
 }
 
 /** FOOTER **/
