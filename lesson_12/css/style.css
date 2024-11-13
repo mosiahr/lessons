@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+body {
+    font-family: "Epilogue", sans-serif;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
+[class*="__container"] {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-block: 20px;
+    padding-inline: 15px;
+}
+.header, .page {
+    background-color: #28293E;
+    color: #FFF;
+}
+.header__main {
+}
+.header__label {
+    margin-block-end: 20px;
+}
+.label {
+    color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+.header__title {
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.11;
+    margin-block-end: 24px;
+    text-transform: capitalize;
+}
+.page {
+}
+.page__container {
+	margin: 0 auto;
+    max-inline-size: none;
+    padding-block: 180px;
+}
+.page__block {
+    padding-block: 20px;
+	position: relative;
+	perspective: 200px;
+}
+.page__ground {
+	background-color: #EF6D58;
+    width: 100%;
+	height: 150px;
+	position: absolute;
+	left: 0;
+	top: 195px;
+	transform: rotateX(20deg);
+}
+.page__ground::before {
+	content: "";
+	background-color: #FFF;
+    width: 100%;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+.page__car {
+}
+
+.car {
+    position: relative;
+    width: 800px;
+
+	transition-duration: 0.3s;
+	height: 100%;
+	left: 30px;
+	top: 0px;
+}
+
+.car:hover .car__glass{
+    transform: translate(0, 50%) skewX(60deg);
+    transition: all 1.3s;
+}
+.car:not(:hover) .car__glass{
+    transform: translate(0, 0) skewX(60deg);
+    transition: all 1.3s;
+}
+.car:hover .body-car__left::before{
+    background: #82050f;
+    transition: all 0.3s;
+	box-shadow: 0px 0px 10px 5px #82050f;
+}
+.car:hover .body-car__right::before{
+    background: #f2e88c;
+    transition: all 0.3s;
+	box-shadow: 0px 0px 5px 10px #f2e88c;
+}
+.car__body {
+    font-size: 0;
+    width: 800px;
+}
+.car__body {
+    position: relative;
+}
+.body-car {
+}
+.car__glass {
+    background-color: #fff;
+    height: 55px;
+    left: 305px;
+    opacity: 0.3;
+    position: absolute;
+    top: 2px;
+    transform: skewX(60deg);
+    width: 170px;
+}
+
+.body-car__left {
+    background: rgb(219,34,54);
+    background: linear-gradient(90deg, rgba(219,34,54,1) 0%, rgba(203,12,33,1) 65%);
+    border-radius: 100% 0% 87% 13% / 31% 91% 9% 69% ;
+    bottom: 0;
+    box-shadow: 0px 10px 0px 0px rgba(0,0,0,0.91);
+    display: inline-block;
+    height: 220px;
+    left: 0;
+    position: relative;
+    width: 320px;
+    z-index: 3;
+}
+.body-car__left::before {
+	content: "";
+    background: #bc0b1d;
+	border-radius: 23% 77% 76% 24% / 52% 50% 50% 48%;
+	width: 40px;
+	height: 25px;
+	position: absolute;
+	left: 5px;
+	top: 60px;
+	z-index: 2;
+    border: #101215 solid 1px;
+	transform: rotate(10deg);
+}
+.body-car__triangle-shadow {
+    border-color: transparent transparent transparent #e50d23;
+    border-style: solid;
+    border-width: 30px 0 15px 270px;
+    height: 0px;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    transform: rotate(10deg);
+    width: 0px;
+}
+.body-car__right {
+    background: rgb(219,34,54);
+    background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(203,12,33,1) 65%);
+    border-radius: 0% 100% 5% 95% / 90% 71% 29% 10%;
+    bottom: 0;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.91);
+    display: inline-block;
+    height: 180px;
+    position: absolute;
+    right: 0;
+    width: 60%;
+    z-index: 2;
+}
+.body-car__right::before {
+    background-color: #fff;
+    border: #101215 solid 1px;
+    border-radius: 41% 59% 8% 92% / 25% 67% 33% 75%;
+    bottom: 93px;
+    content: "";
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    width: 70px;
+	transform: rotate(10deg);
+
+}
+.body-car__windshield {
+    background: #BF0116;
+    border-bottom: #101215 solid 1px;
+    height: 8px;
+    left: 70px;
+    position: absolute;
+    top: -20px;
+    transform: rotate(30deg);
+    width: 160px;
+}
+.body-car__door {
+    background: rgb(219,34,54);
+    background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(164,8,25,1) 100%);
+    border-inline: #101215 solid 1px;
+    border-radius: 80% 20% 78% 22% / 0% 100% 0% 100%;
+    bottom: 20px;
+    display: inline-block;
+    height: 150px;
+    left: 0px;
+    position: absolute;
+    transform: rotate(5deg);
+    width: 260px;
+}
+.body-car__door::after {
+    background: #101215;
+    border: #FFF solid 1px;
+    border-radius: 55% 45% 100% 0% / 0% 46% 54% 100%;
+    content: "";
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: -17px;
+    width: 50px;
+}
+.body-car__door::before {
+    background: #101215;
+    border: #FFF solid 1px;
+    content: "";
+    height: 8px;
+    left: 5px;
+    position: absolute;
+    top: 20px;
+    transform: rotate(-3deg);
+    width: 40px;
+}
+
+.car__wheels {
+    position: relative;
+    z-index: 10;
+}
+.car__wheel {
+    background-color: #101215;
+    border-radius: 50%;
+    height: 150px;
+    position: absolute;
+    width: 150px;
+}
+.car__wheel::before {
+    background-color: #101215;
+    border-radius: 50%;
+    content: "";
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+	position: absolute;
+	z-index: 11;
+}
+.car__wheel::after {
+	background: rgb(219,34,54);
+    background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(164,8,25,1) 100%);
+    border-radius: 50%;
+    content: "";
+    height: 90px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+}
+.car__wheel:first-child {
+    bottom: -30px;
+    left: 50px;
+}
+.car__wheel:last-child {
+    bottom: -30px;
+    right: 70px;
+}
+
+.car__rim-wheel {
+	background-color: #28293E;
+    border-radius: 50%;
+    height: 110px;
+    position: absolute;
+    width: 110px;
+	top: 20px;
+	left: 20px;
+}
+
+/** FOOTER **/
+/* [id]:not(:last-child) {
+    display: none;
+} */
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    text-align: center;
+}
+/* .footer__container {
+    margin-inline: auto;
+    max-inline-size: 1200px;
+    padding-inline: 15px;
+} */
