@@ -45,44 +45,53 @@ body {
 .page {
 }
 .page__container {
-	margin: 0 auto;
+    margin: 0 auto;
     max-inline-size: none;
     padding-block: 180px;
 }
 .page__block {
     padding-block: 20px;
-	position: relative;
-	perspective: 200px;
+    perspective: 200px;
+    position: relative;
 }
 .page__ground {
-	background-color: #EF6D58;
+    background-color: #EF6D58;
+    height: 150px;
+    left: 0;
+    position: absolute;
+    top: 195px;
+    transform: rotateX(20deg);
     width: 100%;
-	height: 150px;
-	position: absolute;
-	left: 0;
-	top: 195px;
-	transform: rotateX(20deg);
 }
 .page__ground::before {
-	content: "";
-	background-color: #FFF;
+    background-color: #FFF;
+    content: "";
+    height: 10px;
+    left: 0;
+    position: absolute;
+    top: 50%;
     width: 100%;
-	height: 10px;
-	position: absolute;
-	left: 0;
-	top: 50%;
 }
 .page__car {
 }
 
+/** Car */
+@keyframes move-car {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 100%;
+    }
+}
 .car {
+    animation: move-car 2s linear 8s;
+    height: 100%;
+    left: 0px;
     position: relative;
+    top: 40px;
+    transform: scale(70%);
     width: 800px;
-
-	transition-duration: 0.3s;
-	height: 100%;
-	left: 30px;
-	top: 0px;
 }
 
 .car:hover .car__glass{
@@ -93,15 +102,18 @@ body {
     transform: translate(0, 0) skewX(60deg);
     transition: all 1.3s;
 }
+
+/** Turning on the rear stops of the car */
 .car:hover .body-car__left::before{
     background: #82050f;
+    box-shadow: 0px 0px 10px 5px #82050f;
     transition: all 0.3s;
-	box-shadow: 0px 0px 10px 5px #82050f;
 }
+/** Turning on the car headlights */
 .car:hover .body-car__right::before{
     background: #f2e88c;
+    box-shadow: 0px 0px 5px 10px #f2e88c;
     transition: all 0.3s;
-	box-shadow: 0px 0px 5px 10px #f2e88c;
 }
 .car__body {
     font-size: 0;
@@ -112,7 +124,53 @@ body {
 }
 .body-car {
 }
+
+/** Car Glass */
+@keyframes close-window {
+    from {
+        transform: translate(0, 100%) skewX(60deg);
+    }
+    to {
+        transform: translate(0, 0) skewX(60deg);
+    }
+}
+@keyframes continue-close-window {
+    from {
+        transform: translate(0, 0) skewX(60deg);
+    }
+    to {
+        transform: translate(0, 0) skewX(60deg);
+    }
+}
+@keyframes open-window {
+    from {
+        transform: translate(0, 0%) skewX(60deg);
+    }
+    to {
+        transform: translate(0, 100%) skewX(60deg);
+    }
+}
+@keyframes continue-open-window {
+    from {
+        transform: translate(0, 100%) skewX(60deg);
+    }
+    to {
+        transform: translate(0, 100%) skewX(60deg);
+    }
+}
+@keyframes open-close-window {
+    from {
+        transform: translate(0, 0%) skewX(60deg);
+    }
+    50% {
+        transform: translate(0, 70%) skewX(60deg);
+    }
+    to {
+        transform: translate(0, 0%) skewX(60deg);
+    }
+}
 .car__glass {
+    animation: open-close-window 3s linear 4s;
     background-color: #fff;
     height: 55px;
     left: 305px;
@@ -136,18 +194,31 @@ body {
     width: 320px;
     z-index: 3;
 }
+/** The rear stops of the car */
+@keyframes turn-on-rear-stops {
+    from {
+        box-shadow: 0px 0px 0px 0px #bc0b1d;
+    }
+    10% {
+        box-shadow: 0px 0px 10px 5px #a50b18;
+    }
+    to {
+        box-shadow: 0px 0px 10px 5px #82050f;
+    }
+}
 .body-car__left::before {
-	content: "";
+    animation: turn-on-rear-stops 1s linear 2s;
     background: #bc0b1d;
-	border-radius: 23% 77% 76% 24% / 52% 50% 50% 48%;
-	width: 40px;
-	height: 25px;
-	position: absolute;
-	left: 5px;
-	top: 60px;
-	z-index: 2;
     border: #101215 solid 1px;
-	transform: rotate(10deg);
+    border-radius: 23% 77% 76% 24% / 52% 50% 50% 48%;
+    content: "";
+    height: 25px;
+    left: 5px;
+    position: absolute;
+    top: 60px;
+    transform: rotate(10deg);
+    width: 40px;
+    z-index: 2;
 }
 .body-car__triangle-shadow {
     border-color: transparent transparent transparent #e50d23;
@@ -173,6 +244,30 @@ body {
     width: 60%;
     z-index: 2;
 }
+/** The car headlights */
+@keyframes turn-on-headlights {
+    from {
+        background: #fff;
+        box-shadow: none;
+    }
+    50% {
+        background: #f2e88c;
+    }
+    to {
+        background: #f2e88c;
+        box-shadow: 0px 0px 5px 10px #f2e88c;
+    }
+}
+@keyframes continue-shine-headlights {
+    from {
+        background: #f2e88c;
+        box-shadow: 0px 0px 5px 10px #f2e88c;
+    }
+    to {
+        background: #f2e88c;
+        box-shadow: 0px 0px 5px 10px #f2e88c;
+    }
+}
 .body-car__right::before {
     background-color: #fff;
     border: #101215 solid 1px;
@@ -182,9 +277,12 @@ body {
     height: 20px;
     position: absolute;
     right: 20px;
+    transform: rotate(10deg);
     width: 70px;
-	transform: rotate(10deg);
 
+	animation: turn-on-headlights 1s linear 2s,
+                continue-shine-headlights 1s linear 3s infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 .body-car__windshield {
     background: #BF0116;
@@ -209,6 +307,7 @@ body {
     transform: rotate(5deg);
     width: 260px;
 }
+/** Rearview mirror */
 .body-car__door::after {
     background: #101215;
     border: #FFF solid 1px;
@@ -220,6 +319,7 @@ body {
     top: -17px;
     width: 50px;
 }
+/** Door Handle */
 .body-car__door::before {
     background: #101215;
     border: #FFF solid 1px;
@@ -232,6 +332,7 @@ body {
     width: 40px;
 }
 
+/** Car Wheels  */
 .car__wheels {
     position: relative;
     z-index: 10;
@@ -250,14 +351,14 @@ body {
     height: 20px;
     left: 50%;
     position: absolute;
+    position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 20px;
-	position: absolute;
-	z-index: 11;
+    z-index: 11;
 }
 .car__wheel::after {
-	background: rgb(219,34,54);
+    background: rgb(219,34,54);
     background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(164,8,25,1) 100%);
     border-radius: 50%;
     content: "";
@@ -278,13 +379,13 @@ body {
 }
 
 .car__rim-wheel {
-	background-color: #28293E;
+    background-color: #28293E;
     border-radius: 50%;
     height: 110px;
+    left: 20px;
     position: absolute;
+    top: 20px;
     width: 110px;
-	top: 20px;
-	left: 20px;
 }
 
 /** FOOTER **/
