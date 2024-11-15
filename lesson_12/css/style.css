@@ -42,6 +42,23 @@ body {
     margin-block-end: 24px;
     text-transform: capitalize;
 }
+/** Moon */
+@keyframes move-moon {
+    0% {
+        right: 80px;
+		transform: rotate(0deg);
+    }
+    50% {
+        right: 700px;
+		transform: rotate(50deg);
+
+    }
+	100% {
+		right: 80px;
+		transform: rotate(0deg);
+
+	}
+}
 .moon {
 	position: absolute;
 	right: 80px;
@@ -51,6 +68,7 @@ body {
 	border-radius: 50%;
 	background: radial-gradient(circle at top right, white 35%, black);
 	box-shadow: 0 0 200px 100px white;
+	animation: move-moon 60s linear 8s infinite;
 }
 .page {
 }
@@ -76,25 +94,14 @@ body {
 .page__ground {
 	background: linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px) center / 350px 7px repeat-x, #EF6D58;
     height: 150px;
-    /* left: 0; */
 	right: -200px;
     position: absolute;
     top: 195px;
     transform: rotateX(20deg);
     width: 3000px;
 	border-block: 5px solid #fff;
-	animation: move-ground 3s linear 10s infinite;
+	animation: move-ground 3s linear 9s infinite;
 }
-/* .page__ground::before {
-    background-color: #FFF;
-    content: "";
-    height: 10px;
-    left: 0;
-    position: absolute;
-    top: 50%;
-    width: 100px;
-	mask-repeat: repeat-x;
-} */
 .page__car {
 }
 
@@ -103,21 +110,27 @@ body {
     0% {
         left: -50px;
     }
-    100% {
-        left: 400px;
+    50% {
+        left: 500px;
     }
+	100% {
+		left: 200px;
+	}
 }
 @keyframes continue-move-car {
     0% {
-        left: 400px;
+        left: 200px;
     }
+	50% {
+		left: 100px;
+	}
     100% {
-        left: 400px;
+        left: 200px;
     }
 }
 .car {
     animation: move-car 2s linear 8s,
-				continue-move-car 1s linear 10s infinite;
+				continue-move-car 10s linear 10s infinite;
     height: 100%;
     left: -50px;
     position: relative;
@@ -126,26 +139,41 @@ body {
     width: 800px;
 }
 /** Light from headlights */
+@keyframes turn-on-light {
+    from {
+		opacity: 1;
+    }
+	to {
+		opacity: 1;
+	}
+}
 .car::after {
-	height: 400px;
-	width: 150px;
+	height: 205px;
+	width: 80px;
 	border-radius: 50%;
-	background-color: #fdf0e9;
+	background-color: #FFF;
 	content: "";
 	position: absolute;
-	right: -400px;
-	top: -300px;
+	right: -570px;
+	top: -30px;
+	box-shadow: 0 0 100px 50px white;
+	transform: rotate(-2deg);
+	animation: turn-on-light 1s linear 7s infinite;
+	opacity: 0;
 }
 .car::before {
-	height: 400px;
-	width: 150px;
+	height: 200px;
+	width: 80px;
 	border-radius: 50%;
-	background-color: #fdf0e9;
+	background-color: #fff;
 	content: "";
 	position: absolute;
-	right: -520px;
-	top: -300px;
-	box-shadow: 3px 3px #FFF;
+	right: -605px;
+	top: -30px;
+	box-shadow: 0 0 100px 50px white;
+	transform: rotate(-2deg);
+	animation: turn-on-light 1s linear 7s infinite;
+	opacity: 0;
 }
 
 .car:hover .car__glass{
@@ -175,6 +203,47 @@ body {
 }
 .car__body {
     position: relative;
+}
+@keyframes turn-on-light-triangle {
+    from {
+		opacity: 0.4;
+    }
+	to {
+		opacity: 0.4;
+	}
+}
+.car__body::after {
+	content: "";
+    border-color: #fff transparent transparent transparent ;
+    border-style: solid;
+    border-width: 200px 40px 100px 560px;
+    height: 40px;
+    position: absolute;
+    right: -570px;
+    top: 40px;
+    transform: rotate(-14deg);
+    width: 20px;
+	box-shadow: 0 0 100px 50px inset white;
+	opacity: 0.4;
+	animation: turn-on-light-triangle 1s linear 7s infinite;
+	opacity: 0;
+} 
+
+.car__body::before {
+	content: "";
+    border-color: #fff transparent transparent transparent ;
+    border-style: solid;
+    border-width: 200px 40px 100px 560px;
+    height: 40px;
+    position: absolute;
+    right: -610px;
+    top: 40px;
+    transform: rotate(-15deg);
+    width: 20px;
+	box-shadow: 0 0 100px 50px inset white;
+	opacity: 0.4;
+	animation: turn-on-light-triangle 1s linear 7s infinite;
+	opacity: 0;
 }
 .body-car {
 }
@@ -234,6 +303,7 @@ body {
     transform: skewX(60deg);
     width: 170px;
 }
+
 
 .body-car__left {
     background: rgb(219,34,54);
@@ -326,7 +396,7 @@ body {
     background-color: #fff;
     border: #101215 solid 1px;
     border-radius: 41% 59% 8% 92% / 25% 67% 33% 75%;
-    bottom: 93px;
+    bottom: 88px;
     content: "";
     height: 20px;
     position: absolute;
@@ -347,6 +417,7 @@ body {
     transform: rotate(30deg);
     width: 160px;
 }
+
 .body-car__door {
     background: rgb(219,34,54);
     background: radial-gradient(circle, rgba(219,34,54,1) 0%, rgba(164,8,25,1) 100%);
