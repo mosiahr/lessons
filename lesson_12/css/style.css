@@ -85,22 +85,22 @@ body {
 /** Ground */
 @keyframes move-ground {
     0% {
-        right: -1000px;
+        right: -2000px;
     }
     100% {
-        right: -300px;
+        right: -950px;
     }
 }
 .page__ground {
 	background: linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px) center / 350px 7px repeat-x, #EF6D58;
     height: 150px;
-	right: -200px;
+	right: -2000px;
     position: absolute;
     top: 195px;
     transform: rotateX(20deg);
-    width: 3000px;
+    width: 4000px;
 	border-block: 5px solid #fff;
-	animation: move-ground 3s linear 9s infinite;
+	animation: move-ground 3s linear 9.5s infinite;
 }
 .page__car {
 }
@@ -110,9 +110,15 @@ body {
     0% {
         left: -50px;
     }
-    50% {
+    40% {
         left: 500px;
     }
+	50% {
+		left: 500px;
+	}
+	70% {
+		left: 400px;
+	}
 	100% {
 		left: 200px;
 	}
@@ -129,8 +135,8 @@ body {
     }
 }
 .car {
-    animation: move-car 2s linear 8s,
-				continue-move-car 10s linear 10s infinite;
+    animation: move-car 4s linear 8s,
+				continue-move-car 10s linear 12s infinite;
     height: 100%;
     left: -50px;
     position: relative;
@@ -320,18 +326,25 @@ body {
 }
 /** The rear stops of the car */
 @keyframes turn-on-rear-stops {
-    from {
+    0% {
+		background: #bc0b1d;
         box-shadow: 0px 0px 0px 0px #bc0b1d;
     }
     10% {
+		background: #a50b18;
         box-shadow: 0px 0px 10px 5px #a50b18;
     }
-    to {
-        box-shadow: 0px 0px 10px 5px #82050f;
+	20% {
+		background: #82050f;
+		box-shadow: 0px 0px 10px 5px #82050f;
+    }
+    100% {
+		background: #82050f;
+		box-shadow: 0px 0px 10px 5px #82050f;
     }
 }
 .body-car__left::before {
-    animation: turn-on-rear-stops 1s linear 2s;
+    animation: turn-on-rear-stops 5.6s linear 2s;
     background: #bc0b1d;
     border: #101215 solid 1px;
     border-radius: 23% 77% 76% 24% / 52% 50% 50% 48%;
@@ -369,27 +382,31 @@ body {
     z-index: 2;
 }
 /** The car headlights */
-@keyframes turn-on-headlights {
-    from {
+@keyframes turn-on-turn-off-headlights {
+    0% {
         background: #fff;
         box-shadow: none;
     }
-    50% {
+    20% {
         background: #f2e88c;
     }
-    to {
+    40% {
+        background: #f2e88c;
+        box-shadow: 0px 0px 5px 10px #f2e88c;
+    }
+	100% {
         background: #f2e88c;
         box-shadow: 0px 0px 5px 10px #f2e88c;
     }
 }
 @keyframes continue-shine-headlights {
     from {
-        background: #f2e88c;
-        box-shadow: 0px 0px 5px 10px #f2e88c;
+        background: #fff;
+		box-shadow: 0 0 5px 5px white;
     }
     to {
-        background: #f2e88c;
-        box-shadow: 0px 0px 5px 10px #f2e88c;
+        background: #fff;
+		box-shadow: 0 0 5px 5px white;
     }
 }
 .body-car__right::before {
@@ -403,8 +420,8 @@ body {
     right: 20px;
     transform: rotate(10deg);
     width: 70px;
-	animation: turn-on-headlights 1s linear 2s,
-                continue-shine-headlights 1s linear 3s infinite;
+	animation: turn-on-turn-off-headlights 5s linear 2s,
+                continue-shine-headlights 2s linear 7s infinite;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 .body-car__windshield {
