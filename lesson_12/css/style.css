@@ -85,53 +85,49 @@ body {
 /** Ground */
 @keyframes move-ground {
     0% {
-        right: -2000px;
+		transform: translateX(-1000px) rotateX(20deg);
     }
     100% {
-        right: -950px;
+		transform: translateX(-4150px) rotateX(20deg);
     }
 }
 .page__ground {
 	background: linear-gradient(to right, hsl(0deg 0% 100%) 100px, transparent 100px 400px) center / 350px 7px repeat-x, #EF6D58;
     height: 150px;
-	right: -2000px;
     position: absolute;
     top: 195px;
-    transform: rotateX(20deg);
-    width: 4000px;
+    transform: translateX(-1000px) rotateX(20deg);
+    width: 6000px;
 	border-block: 5px solid #fff;
-	animation: move-ground 3s linear 9.5s infinite;
+	animation: move-ground 10.2s linear 9.5s infinite;
 }
 .page__car {
 }
 
 /** Car */
 @keyframes move-car {
-    0% {
-        left: -50px;
+	0% {
+		transform: translateX(0) scale(0.7);
     }
     40% {
-        left: 500px;
+		transform: translateX(550px) scale(0.7);
     }
 	50% {
-		left: 500px;
-	}
-	70% {
-		left: 400px;
+		transform: translateX(550px) scale(0.7);
 	}
 	100% {
-		left: 200px;
+		transform: translateX(200px) scale(0.7);
 	}
 }
 @keyframes continue-move-car {
     0% {
-        left: 200px;
+		transform: translateX(200px) scale(0.7);
     }
 	50% {
-		left: 100px;
+		transform: translateX(100px) scale(0.7);
 	}
     100% {
-        left: 200px;
+		transform: translateX(200px) scale(0.7);
     }
 }
 .car {
@@ -141,7 +137,7 @@ body {
     left: -50px;
     position: relative;
     top: 35px;
-    transform: scale(0.7);
+    transform: translate(0) scale(0.7);
     width: 800px;
 }
 /** Light from headlights */
