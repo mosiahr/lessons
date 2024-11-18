@@ -38,7 +38,7 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
       </main>
       <footer class="footer">
          <div class="footer__container">
-            <span>© 2024 Gregory</span>
+            <span>© 2024 Gregory Mosia</span>
          </div>
       </footer>
    </div>
@@ -56,6 +56,11 @@ DEFAULT_STYLE_CSS = \
 .wrapper {
     min-height: 100%;
     overflow: hidden;
+}
+[class*="__container"] {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-inline: 15px;
 }
 '''
 
