@@ -57,7 +57,7 @@ DEFAULT_STYLE_CSS = \
     min-height: 100%;
     overflow: hidden;
 }
-[class*="__container"] {
+[class$="__container"] {
 	max-width: 1140px;
 	margin: 0 auto;
 	padding-inline: 15px;
