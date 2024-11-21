@@ -21,12 +21,13 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
    <div class="wrapper">
       <header class="header">
          <div class="header__container">
+            Header
          </div>
       </header>
       <main class="page">
          <div class="page__container">
             <div class="page__">
-
+               Main
 			</div>
 			<div class="page__">
 
@@ -55,12 +56,23 @@ DEFAULT_STYLE_CSS = \
 
 .wrapper {
     min-height: 100%;
-    overflow: hidden;
+    overflow: clip;
 }
-[class$="__container"] {
-	max-width: 1140px;
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1170px;
 	margin: 0 auto;
 	padding-inline: 15px;
+}
+
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    text-align: center;
+	padding-block: 15px;
 }
 '''
 
