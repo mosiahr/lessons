@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
 /* Local fonts */
 @import url('fonts.css');
 
@@ -11,19 +13,111 @@
     overflow: clip;
 }
 .wrapper > main {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 [class*="__container"] {
     margin: 0 auto;
     max-width: 1170px;
-    padding-inline: 15px;
+
+    /* padding-inline: 15px; */
 }
 
+.wrapper {
+}
+.header {
+}
+
+.page {
+	background-color: #28293e;
+}
+
+.page__portfolio {
+}
+.portfolio {
+}
+.portfolio__filter {
+}
+.filter {
+}
+.filter__item {
+}
+.portfolio__products {
+}
+.products {
+    column-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 32px;
+}
+.products__item {    
+	position: relative;
+	overflow: hidden;
+	border-radius: 6px;
+	display: flex;
+
+}
+.products__item:nth-child(4n) img,
+.products__item:nth-child(4n+1) img {
+    inline-size: 470px;
+
+    /* 4*0+0, 4*0+1, 4*1+0, 4*1+1, 4*2+0, 4*2+1, 4*3+0, 4*3+1, */
+    /* 1, 4, 5, 8, 9, 12, 13 ...      */
+    /* 4n+0, 4n+1 */
+}
+.products__item:nth-child(4n+2) img,
+.products__item:nth-child(4n+3) img {
+    inline-size: 670px;
+
+    /* 2+4*0+0, 2+4*0+1, 2+4*1+0, 2+4*1+1, 2+4*2+0, 2+4*2+1, 2+4*3+0, 2+4*3+1 */
+    /* 2, 3, 6, 7, 10, 11, 14,15 ... */
+    /* 4n+2, 4n+3 */
+}
+.products__overlay {
+	inset-block-end: 51px;
+	inset-inline: 48px;
+    position: absolute;
+	text-transform: capitalize;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+.products__label {
+	/* display: inline-block; */
+	color: #391400;
+	line-height: 2;
+	padding: 5px 16px 1px;
+	border-radius: 19px;
+	background: #FFF;
+}
+.products__title {
+	/* display: inline-block; */
+	color: #FFF;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 1.2;
+}
+.products__title--uppercase {
+	text-transform: uppercase;
+}
+
+.portfolio__button {
+}
+.button {
+}
+.page__get-started {
+}
+.page__events {
+}
+.page__our-team {
+}
+.page__founder-words {
+}
 
 .footer {
     background-color: #fdf0e9;
     color: #391400;
     font-weight: 700;
+    padding-block: 15px;
     text-align: center;
-	padding-block: 15px;
 }
