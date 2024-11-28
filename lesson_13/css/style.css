@@ -26,13 +26,13 @@ body {
 
 /** Buttons */
 .button {
-    color: #FFF;
     border-radius: 6px;
+    color: #FFF;
     font-weight: 900;
+    overflow: hidden;
     padding: 18px 30px 16px;
     text-align: center;
     text-transform: uppercase;
-	overflow: hidden;
 }
 .button--light-primary {
     background: #EF6D58;
@@ -40,7 +40,7 @@ body {
 .button--light-primary:hover {
     background-color: #FFF;
     border: 1px solid #EF6D58;
-	color: #391400;
+    color: #391400;
     padding: 17px 29px 15px;
 }
 .button--dark-secondary {
@@ -73,12 +73,15 @@ body {
     text-transform: uppercase;
 }
 .portfolio__title {
+    margin: 0 auto 36px;
+}
+.title {
     color: #FFF;
     font-size: 56px;
     font-weight: 800;
     letter-spacing: -1px;
     line-height: 1.14;
-    margin-block-end: 36px;
+    max-inline-size: 531px;
     text-align: center;
     text-transform: capitalize;
 }
@@ -124,11 +127,11 @@ body {
     row-gap: 32px;
 }
 .products__item {
-	border-radius: 6px;
-	flex-grow: 1;
-	flex-shrink: 1;
-	overflow: hidden;
-	position: relative;
+    border-radius: 6px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    position: relative;
 }
 .products__item img {
     height: 100%;
@@ -283,37 +286,145 @@ body {
 .get-started__button {
 }
 .get-started__shape-card {
-	position: relative;
-	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
+    box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
+    position: relative;
 }
 .get-started__shape-card img {
-	width: 338px;
-	height: 176px;
+    height: 176px;
+    width: 338px;
 }
 .get-started__shape-card::before {
-	content: "";
-	background-color: #FFF;
-	border-radius: 6px;
-	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
-	width: 306px;
-	height: 176px;
-	position: absolute;
-	inset: 8px 16px;
-	z-index: -1;
+    background-color: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
+    content: "";
+    height: 176px;
+    inset: 8px 16px;
+    position: absolute;
+    width: 306px;
+    z-index: -1;
 }
 .get-started__shape-card::after {
-	content: "";
-	background-color: #FFF;
-	border-radius: 6px;
-	box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
-	width: 274px;
-	height: 176px;
-	position: absolute;
-	inset: 16px 32px;
-	z-index: -2;
+    background-color: #FFF;
+    border-radius: 6px;
+    box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
+    content: "";
+    height: 176px;
+    inset: 16px 32px;
+    position: absolute;
+    width: 274px;
+    z-index: -2;
 }
+
+/** Events */
 .page__events {
+    margin-block-end: 140px;
 }
+.events {
+}
+.events__label {
+    margin-block-end: 20px;
+    text-align: center;
+}
+.label {
+}
+.events__title {
+    margin: 0 auto 64px;
+}
+.title {
+}
+.events__items {
+	display: flex;
+	gap: 30px;
+    margin: 0 auto 64px;
+	flex-wrap: wrap;
+}
+.events__item {
+
+}
+.item-events {
+	display: flex;
+    color: #FFF;
+    max-inline-size: 370px;
+	flex-direction: column;
+	padding: 36px 40px;
+	border: 1px solid #3A3C56;
+	border-radius: 6px;
+}
+.item-events__date {
+	display: flex;
+	gap: 12px;
+}
+.item-events__day {
+    color: #FFF;
+    display: inline-block;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.11;
+}
+.item-events__on-date {
+	display: flex;
+	flex-direction: column;
+	padding: 5px 0 11px;
+	margin-block-end: 8px;
+}
+.item-events__month,
+.item-events__year {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33;
+    text-transform: capitalize;
+}
+.item-events__duration {
+    line-height: 2;
+	display: flex;
+	gap: 9px 8px;
+	margin-block-end: 36px;
+}
+.item-events__duration::before {
+	background: url("../img/events/watch-icon.svg") center/ 16px no-repeat;
+	content: "";
+	flex: 0 0 16px;
+	padding-block: 7px 9px;
+}
+
+.item-events__splitter {
+    background: #3A3C56;
+    flex-shrink: 0;
+    height: 1px;
+    /* max-inline-size: 290px; */
+	margin-block-end: 40px;
+}
+.item-events__name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.33;
+    text-transform: capitalize;
+	margin-block-end: 19px;
+}
+.item-events__describe {
+    line-height: 2;
+	color: rgba(255, 255, 255, 0.64);
+	margin-block-end: 26px;
+}
+.item-events__describe::first-letter {
+	text-transform: uppercase;
+}
+.item-events__link {
+    line-height: 2;
+	text-transform: capitalize;
+	transition: all 0.3s;
+}
+.item-events__link:hover {
+	color: #EF6D58;
+}
+
+.events__button {
+    margin: 0 auto;
+    text-align: center;
+}
+
 .page__our-team {
 }
 .page__founder-words {
