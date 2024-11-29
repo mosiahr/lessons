@@ -534,6 +534,78 @@ body {
 	background-color: #EF6D58;
 }
 
+/** Founder Words */
+.page__founder-words {
+	padding-block-end: 176px;
+}
+.founder-words {
+}
+.founder-words__block {
+	display: flex;
+	justify-content: space-between;
+	gap: 130px;
+	align-items: center;
+	/* flex-wrap: wrap; */
+}
+.founder-words__person-picture {
+	flex: 1 1 570px;
+	background: url('../img/founder-words/background-person.webp') center / cover no-repeat;
+	inline-size: 570px;
+	block-size: 448px;
+	border-radius: 6px;
+	border: 1px solid #3A3C56;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	aspect-ratio: 570 / 448;
+}
+.founder-words__person-picture img {
+	inline-size: 477px;
+}
+.founder-words__info {
+	display: flex;
+	flex-direction: column;
+}
+.founder-words__label {
+	margin-block-end: 33px;
+}
+
+.founder-words__quote {
+	color: #FFF;
+	font-size: 40px;
+	font-weight: 800;
+	line-height: 1.2;
+	margin-block-end: 44px;
+	position: relative;
+	z-index: 1;
+}
+.founder-words__quote:first-letter {
+	text-transform: uppercase;
+}
+.founder-words__quote::before {
+	content: "";
+	background: url('../img/founder-words/quotes-picture.svg') 0 0 / 100px 80px no-repeat ;
+	inline-size: 100px;
+	block-size: 80px;
+	position: absolute;
+	inset-inline-start: 324px;
+	inset-block-start: -56px;
+	z-index: -1;
+}
+.founder-words__autor {
+	color: #FFF;
+	font-size: 20px;
+	line-height: 1.6;
+	text-transform: capitalize;
+	margin-block-end: 6px;
+}
+.founder-words__position {
+	color: rgba(255, 255, 255, 0.64);
+	font-size: 14px;
+	line-height: 1.71; 
+	text-transform: capitalize;
+}
+
 
 
 
