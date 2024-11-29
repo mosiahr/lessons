@@ -33,9 +33,11 @@ body {
     padding: 18px 30px 16px;
     text-align: center;
     text-transform: uppercase;
+	transition: all 0.4s;
 }
 .button--light-primary {
     background: #EF6D58;
+	transition: background 0.3s;
 }
 .button--light-primary:hover {
     background-color: #FFF;
@@ -149,6 +151,9 @@ body {
     transition-duration: 0.3s;
     width: 100%;
 }
+.products__item:hover .products__title {
+    color: #5C2000;
+}
 .products__item:nth-child(odd):hover::before {
     transform: translateX(100%);
 }
@@ -191,12 +196,18 @@ body {
     color: #391400;
     line-height: 2;
     padding: 5px 16px 1px;
+	transition: all 0.3s;
+}
+.products__label:hover {
+    background: #EF6D58;
+	color: #FFF;
 }
 .products__title {
     color: #FFF;
     font-size: 40px;
     font-weight: 800;
     line-height: 1.2;
+	transition: all 0.3s;
 }
 .products__title--uppercase {
     text-transform: uppercase;
@@ -498,6 +509,7 @@ body {
 .team__position {
 	color: rgba(255, 255, 255, 0.64);
 	line-height: 2;
+	text-transform: capitalize;
 }
 .team__slider-points {
 	margin-block-end: 180px;
