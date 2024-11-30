@@ -222,13 +222,17 @@ body {
     margin-block-end: 140px;
 }
 .get-started {
-    align-items: center;
+}
+.get-started__block {
+	align-items: center;
     background: #FDF0E9;
     border-radius: 6px;
     display: flex;
     justify-content: space-evenly;
     position: relative;
     z-index: 1;
+	flex-wrap: wrap;
+	row-gap: 20px;
 }
 @keyframes rotate-element {
     0% {
@@ -346,6 +350,7 @@ body {
 	gap: 30px;
     margin: 0 auto 64px;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .events__item {
 }
@@ -543,15 +548,13 @@ body {
 .founder-words__block {
 	display: flex;
 	justify-content: space-between;
-	gap: 130px;
+	gap: 30px 130px;
 	align-items: center;
-	/* flex-wrap: wrap; */
+	flex-wrap: wrap;
 }
 .founder-words__person-picture {
-	flex: 1 1 570px;
 	background: url('../img/founder-words/background-person.webp') center / cover no-repeat;
-	inline-size: 570px;
-	block-size: 448px;
+	flex-basis: 570px;
 	border-radius: 6px;
 	border: 1px solid #3A3C56;
 	display: flex;
@@ -560,9 +563,12 @@ body {
 	aspect-ratio: 570 / 448;
 }
 .founder-words__person-picture img {
-	inline-size: 477px;
+	max-inline-size: 477px;
+	aspect-ratio: 477 / 420;
+	flex: 1 1 477px;
 }
 .founder-words__info {
+	flex: 1 1 470px;
 	display: flex;
 	flex-direction: column;
 }
@@ -588,7 +594,7 @@ body {
 	inline-size: 100px;
 	block-size: 80px;
 	position: absolute;
-	inset-inline-start: 324px;
+	inset-inline-end: 46px;
 	inset-block-start: -56px;
 	z-index: -1;
 }
