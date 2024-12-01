@@ -494,7 +494,7 @@ body {
 .team__items {
 	display: flex;
 	gap: 30px;
-	justify-items: space-between;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-block-end: 52px;
 }
