@@ -591,6 +591,21 @@ body {
 	gap: 30px 130px;
 	align-items: center;
 	flex-wrap: wrap;
+	transition: all 0.3s;
+}
+@keyframes move-element {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(20px);
+    }
+	80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 .founder-words__person-picture {
 	background: url('../img/founder-words/background-person.webp') center / cover no-repeat;
@@ -606,7 +621,13 @@ body {
 	max-inline-size: 477px;
 	aspect-ratio: 477 / 420;
 	flex: 1 1 477px;
+	transition: all 0.3s;
+	animation: move-element 10s linear infinite;
 }
+.founder-words__person-picture:hover img {
+    animation-play-state: paused;
+}
+
 .founder-words__info {
 	flex: 1 1 470px;
 	display: flex;
@@ -651,12 +672,6 @@ body {
 	line-height: 1.71; 
 	text-transform: capitalize;
 }
-
-
-
-
-
-
 .page__founder-words {
 }
 
