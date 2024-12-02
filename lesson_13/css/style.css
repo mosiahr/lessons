@@ -56,11 +56,11 @@ body {
 .header {
     background-color: #28293e;
 }
-.header__title {
-	color: #EF6D58;
-	padding-block: 20px;
-	text-transform: uppercase;
-	font-size: 24px;
+.header__block {
+	padding-block-start: 20px;
+}
+.header__block > hr {
+	border: 1px solid #FFF;
 }
 
 .page {
@@ -481,15 +481,44 @@ body {
 	border-radius: 50%;
 	justify-content: center;
 	align-items: center;
+	transition: all 0.3s;
+}
+
+@keyframes move-left-element {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes move-right-element {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 .header-team__slider-arrow:hover {
 	background-color: #EF6D58;
-	transition: all 0.3s;
 	border:  0.5px solid #EF6D58;
 }
 .header-team__slider-arrow img {
 	width: 14px;
 	height: 10px;
+}
+.header-team__slider-arrows a:first-child .header-team__slider-arrow:hover img {
+	animation: move-left-element 1s linear 0s 2;
+}
+.header-team__slider-arrows a:last-child .header-team__slider-arrow:hover img {
+	animation: move-right-element 1s linear 0s 2;
 }
 .team__items {
 	display: flex;
@@ -540,11 +569,14 @@ body {
 	transition: all 0.3s;
 }
 .slider-points__item:hover {
-	border: 1px solid #EF6D58;
+	border: 1px solid #FFF;
 }
 .slider-points__item--active {
 	border: 1px solid #EF6D58;
 	background-color: #EF6D58;
+}
+.slider-points__item--active:hover {
+	border: 1px solid #EF6D58;
 }
 
 /** Founder Words */
