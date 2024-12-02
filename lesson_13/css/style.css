@@ -6,6 +6,9 @@
 /* Reset */
 @import url('reset.css');
 
+/* Keyframes */
+@import url('keyframes.css');
+
 body {
     font-family: "Epilogue", sans-serif;
 }
@@ -242,17 +245,6 @@ body {
 	flex-wrap: wrap;
 	row-gap: 20px;
 }
-@keyframes rotate-element {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
 .get-started__present-icon {
     height: 148px;
     left: 222px;
@@ -483,29 +475,6 @@ body {
 	align-items: center;
 	transition: all 0.3s;
 }
-
-@keyframes move-left-element {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-10px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-@keyframes move-right-element {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(10px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
 .header-team__slider-arrow:hover {
 	background-color: #EF6D58;
 	border:  0.5px solid #EF6D58;
@@ -593,20 +562,7 @@ body {
 	flex-wrap: wrap;
 	transition: all 0.3s;
 }
-@keyframes move-element {
-    0% {
-        transform: translateX(0);
-    }
-    40% {
-        transform: translateX(20px);
-    }
-	80% {
-        transform: translateX(-20px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 .founder-words__person-picture {
 	background: url('../img/founder-words/background-person.webp') center / cover no-repeat;
 	flex-basis: 570px;
