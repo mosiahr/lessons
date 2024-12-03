@@ -54,6 +54,9 @@ DEFAULT_STYLE_CSS = \
 /* Reset */
 @import url('reset.css');
 
+/* Keyframes */
+@import url('keyframes.css');
+
 .wrapper {
     min-height: 100%;
     overflow: clip;
