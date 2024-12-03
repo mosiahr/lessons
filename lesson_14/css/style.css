@@ -1,0 +1,50 @@
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+/* Keyframes */
+@import url('keyframes.css');
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1170px;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+
+
+
+
+.label {
+    color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    text-align: center;
+	padding-block: 15px;
+}
