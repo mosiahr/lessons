@@ -189,5 +189,7 @@ if __name__ == '__main__':
     create_file(os.path.join(project_dir, 'css/style.css'), DEFAULT_STYLE_CSS)
     create_file(os.path.join(project_dir, 'css/reset.css'), DEFAULT_RESET_CSS)
     create_file(os.path.join(project_dir, 'css/fonts.css'))
+    create_file(os.path.join(project_dir, 'css/keyframes.css'))
+
 
 
