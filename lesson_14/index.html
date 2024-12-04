@@ -20,20 +20,40 @@
 			</div>
 		</header>
 		<main class="page">
-			<div class="page__container personal-portfolio">
-				<div class="personal-portfolio__form">
+			<div class="page__personal-portfolio personal-portfolio">
+				<div class="personal-portfolio__container">
 					<div class="personal-portfolio__text">
 						There are many variations of passages of Lorem Ipsu available,
 						but the majority have suffered alte.
 					</div>
-					<form method="POST" action="#">
-						<input placeholder="Name*" selected required name="name" type="text">
-						<input placeholder="Email*" required name="email" type="email">
-						<input placeholder="Location" name="location" type="text">
-						<input placeholder="Budget*" required name="budget" type="text">
-						<input placeholder="Subject*" required name="subject" type="text">
-						<textarea autocomplete="off" placeholder="Message*" required name="message"></textarea>
-						<button>Submit</button>
+					<form class="personal-portfolio__form form" method="GET" action="#">
+						<div class="form__line">
+							<input class="form__input" id="name" required name="form[]" type="text">
+							<label class="form__label" for="name">Name*</label>
+						</div>
+						<div class="form__line">
+							<input class="form__input" id="email" required name="form[]" type="email">
+							<label class="form__label" for="email">Email*</label>
+						</div>
+						<div class="form__line">
+							<input class="form__input" id="lacation" name="form[]" type="text">
+							<label class="form__label" for="lacation">Location</label>
+						</div>
+						<div class="form__line form__line--budget">
+							<input class="form__input" id="budget" required name="form[]" type="number">
+							<label class="form__label" for="budget">Budget*</label>
+						</div>
+						<div class="form__line form__line--subject">
+							<input class="form__input" id="subject" required name="form[]" type="text">
+							<label class="form__label" for="subject">Subject*</label>
+						</div>
+						<div class="form__line">
+							<textarea class="form__input" id="message" autocomplete="off" required name="form[]"></textarea>
+							<label class="form__label" for="message">Message*</label>
+						</div>
+						<div class="form__line form__line--button">
+							<button class="form__button button">Submit</button>
+						</div>
 					</form>
 				</div>
 			</div>

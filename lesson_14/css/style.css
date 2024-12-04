@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900);
+
 /* Local fonts */
 @import url('fonts.css');
 
@@ -7,7 +9,16 @@
 /* Keyframes */
 @import url('keyframes.css');
 
+body {
+    font-family: "Work Sans", sans-serif;
+}
+textarea {
+    resize: vertical;
+}
+
 .wrapper {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     overflow: clip;
 }
@@ -15,36 +26,133 @@
     flex-grow: 1;
 }
 [class*="__container"] {
+    margin: 0 auto;
     max-width: 1170px;
-	margin: 0 auto;
-	padding-inline: 15px;
+    padding-inline: 15px;
 }
 
-
-
-
+.header {
+}
+.header__container {
+}
+.header__block {
+}
+.header__label {
+}
+.header__title {
+    margin-block-end: 20px;
+}
 .label {
     color: #EF6D58;
     letter-spacing: 3px;
     line-height: 2;
     text-transform: uppercase;
 }
+.title {
+    color: #391400;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.14;
+    max-inline-size: 531px;
+    text-transform: capitalize;
+}
 
+.page__personal-portfolio {
+}
+.personal-portfolio {
+    margin-block-end: 20px;
+}
+.personal-portfolio__container {
+    max-width: 590px;
+    padding-inline: 15px;
+}
+.personal-portfolio__text {
+    color:  #87909D;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-block-end: 50px;
+}
 
-
-
-
-
-
-
-
-
-
+.personal-portfolio__form {
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+	column-gap: 24px;
+}
+.form__line {
+    width: 100%;
+	position: relative;
+}
+.form__line--budget {
+    max-width: calc(200 / 560 * 100%);
+}
+.form__line--subject {
+    max-width: calc(336 / 560 * 100%);
+}
+.form__label {
+    color: #697484;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
+	position: absolute;
+	inset-inline-start: 0;
+	inset-block-start: -16px;
+}
+.form__input {
+    appearance: none;
+	border-bottom: 1.5px solid #E6E8EB;
+	transition: border-bottom .3s;
+	padding-block: 5px;
+}
+.form__input:focus-visible {
+	border-bottom: 2px solid #A53DFF;
+	outline: none;
+}
+.form__input:focus-visible + .form__label {
+	color: #A53DFF;
+}
+.form__input:checked {
+    border-bottom: 1.5px solid #A53DFF;
+}
+.form__line--button {
+}
+.form__button {
+	margin-block-start: calc(50px - 24px);
+}
+.button {
+    align-items: center;
+    background: #A53DFF;
+    border-radius: 4px;
+    color: #FFF;
+    display: flex;
+    font-weight: 600;
+    gap: 12px;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    padding: 12px 24px;
+}
+.button::after {
+    background: url("../img/arrow.svg") 0 0 / cover no-repeat;
+    block-size: 24px;
+    content: "";
+    inline-size: 24px;
+    transition: all .3s;
+}
+.button:hover {
+    background: #8719e8;
+}
+.button:hover::after {
+    transform: translateX(10px);
+}
 
 .footer {
     background-color: #fdf0e9;
     color: #391400;
     font-weight: 700;
+    padding-block: 15px;
     text-align: center;
-	padding-block: 15px;
 }
