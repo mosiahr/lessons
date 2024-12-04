@@ -40,7 +40,7 @@
 							<label class="form__label" for="lacation">Location</label>
 						</div>
 						<div class="form__line form__line--budget">
-							<input class="form__input" id="budget" required name="form[]" type="number">
+							<input class="form__input" id="budget" required name="form[]" type="number" min="0">
 							<label class="form__label" for="budget">Budget*</label>
 						</div>
 						<div class="form__line form__line--subject">
@@ -52,15 +52,46 @@
 							<label class="form__label" for="message">Message*</label>
 						</div>
 						<div class="form__line form__line--button">
-							<button class="form__button button">Submit</button>
+							<button class="form__button button" type="submit">Submit</button>
 						</div>
 					</form>
 				</div>
 			</div>
-			<div class="page__container ">
-				<div class="">
-					<form action="">
-
+			<div class="page__dark-website dark-website">
+				<div class="page__container">
+					<form class="dark-website__dark-form dark-form" action="#">
+						<div class="dark-form__item">
+							<label class="dark-form__label" for="dark-form__first-name">first name</label>
+							<input class="dark-form__input" placeholder="enter first name" id="dark-form__first-name" required
+								name="form[]" type="text">
+						</div>
+						<div class="dark-form__item">
+							<label class="dark-form__label" for="dark-form__last-name">last name</label>
+							<input class="dark-form__input" placeholder="enter last name" id="dark-form__last-name" required
+								name="form[]" type="text">
+						</div>
+						<div class="dark-form__item">
+							<label class="dark-form__label" for="dark-form__email">email</label>
+							<input class="dark-form__input" placeholder="Enter your Email" id="dark-form__email" required
+								name="form[]" type="text">
+						</div>
+						<div class="dark-form__item">
+							<label class="dark-form__label" for="dark-form__phone-number">phone number</label>
+							<input class="dark-form__input" placeholder="enter phone number" id="dark-form__phone-number"
+								required name="form[]" type="tel">
+						</div>
+						<div class="dark-form__item dark-form__item--long">
+							<label class="dark-form__label" for="dark-form__message">message</label>
+							<textarea class="dark-form__input" placeholder="Enter your Message" id="dark-form__message"
+								autocomplete="off" required name="form[]"></textarea>
+						</div>
+						<div class="dark-form__line">
+							<div class="dark-form__checkbox checkbox">
+								<input class="checkbox__input" id="check" name="form[]" type="checkbox" required>
+								<label class="checkbox__label" for="check">I agree with Terms of Use and Privacy Policy</label>
+							</div>
+							<button class="dark-form__button button--red" type="submit">send message</button>
+						</div>
 					</form>
 				</div>
 			</div>
