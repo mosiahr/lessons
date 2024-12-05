@@ -25,15 +25,11 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
          </div>
       </header>
       <main class="page">
-         <div class="page__container">
-            <div class="page__">
-               Main
-			</div>
-			<div class="page__">
-
-			</div>
-			<div class="page__">
-
+         <div class="page__el el">
+            <div class="el__container">
+               <div class="el__">
+                  Main
+               </div>
 			</div>
 		 </div>
       </main>
@@ -58,6 +54,8 @@ DEFAULT_STYLE_CSS = \
 @import url('keyframes.css');
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
     overflow: clip;
 }
