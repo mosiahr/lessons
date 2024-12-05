@@ -264,7 +264,7 @@ textarea {
 .dark-form__button {
 	appearance: none;
 }
-.button--red {
+.button-dark-form {
     background: #E50000;
     border-radius: 8px;
     color: #FFF;
@@ -276,10 +276,10 @@ textarea {
     text-transform: capitalize;
 	transition: all .3s;
 }
-.button--red:hover {
+.button-dark-form:hover {
     background: #C60303;
 }
-.button--red:focus-visible {
+.button-dark-form:focus-visible {
 	outline: 1px solid #fff;
 }
 
