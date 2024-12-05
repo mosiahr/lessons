@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,regular,500,600,700,800,900);
-@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:regular,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,600);
 
 /* Local fonts */
 @import url('fonts.css');
@@ -33,15 +33,20 @@ textarea {
 }
 
 .header {
+	background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    padding-block: 15px;
+    text-align: center;
 }
 .header__container {
 }
 .header__block {
-	padding-block-start: 20px;
+	/* padding-block-start: 20px;
 	display: flex;
 	flex-direction: column;
 	gap: 15px ;
-	align-items: center;
+	align-items: center; */
 }
 .header__label {
 }
@@ -59,7 +64,6 @@ textarea {
     font-weight: 800;
     letter-spacing: -1px;
     line-height: 1.14;
-    max-inline-size: 531px;
     text-transform: capitalize;
 }
 
@@ -125,6 +129,7 @@ textarea {
 }
 .form__button {
     margin-block-start: calc(50px - 24px);
+	appearance: none;
 }
 .button {
     align-items: center;
@@ -149,8 +154,12 @@ textarea {
 .button:hover {
     background: #8719e8;
 }
-.button:hover::after {
+.button:hover::after,
+.button:focus-visible::after {
     transform: translateX(10px);
+}
+.button:focus-visible {
+	outline: 1px solid #6505bf;
 }
 
 /** Dark Form */
