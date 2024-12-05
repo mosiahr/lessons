@@ -42,11 +42,6 @@ textarea {
 .header__container {
 }
 .header__block {
-	/* padding-block-start: 20px;
-	display: flex;
-	flex-direction: column;
-	gap: 15px ;
-	align-items: center; */
 }
 .header__label {
 }
@@ -83,23 +78,29 @@ textarea {
     margin-block-end: 50px;
 }
 .personal-portfolio__form {
-	margin-block-end: 100px;
+	margin-block-end: 50px;
 }
 .form {
-    column-gap: 24px;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
+	gap: 24px;
+	flex-direction: column;
 }
 .form__line {
     position: relative;
     width: 100%;
 }
-.form__line--budget {
-    max-width: calc(200 / 560 * 100%);
+.form__duble-line {
+	display: flex;
+	gap: 24px;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
-.form__line--subject {
-    max-width: calc(336 / 560 * 100%);
+.form__duble-line > .form__line:first-child {
+	flex: 1 1 200px;
+}
+.form__duble-line > .form__line:last-child {
+	flex: 1 1 336px;
 }
 .form__label {
     color: #697484;
