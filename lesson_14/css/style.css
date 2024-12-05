@@ -82,8 +82,7 @@ textarea {
 }
 .form {
     display: flex;
-    flex-wrap: wrap;
-	gap: 24px;
+	gap: 32px;
 	flex-direction: column;
 }
 .form__line {
@@ -92,7 +91,8 @@ textarea {
 }
 .form__duble-line {
 	display: flex;
-	gap: 24px;
+	column-gap: 24px;
+	row-gap: 32px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
