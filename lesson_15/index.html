@@ -2,34 +2,268 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
-   <title>Lesson_15</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Responsive web Design</title>
 </head>
 
 <body>
-   <div class="wrapper">
-      <header class="header">
-         <div class="header__container">
-            Header
-         </div>
-      </header>
-      <main class="page">
-         <div class="page__el el">
-            <div class="el__container">
-               <div class="el__">
-                  Main
-               </div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__block">
+					<h1 class="header__label label">Homework 15</h1>
+					<h2 class="header__title title header__title--long">Responsive web design</h2>
+					<hr>
+				</div>
+
 			</div>
-		 </div>
-      </main>
-      <footer class="footer">
-         <div class="footer__container">
-            <span>© 2024 Gregory Mosia</span>
-         </div>
-      </footer>
-   </div>
+		</header>
+		<main class="page">
+			<div class="page__portfolio portfolio">
+				<div class="portfolio__container">
+					<h5 class="portfolio__label label">portfolio</h5>
+					<h2 class="portfolio__title title">latest work</h2>
+					<div class="portfolio__filter filter">
+						<a class="filter__item filter__item--text-light">Show all<sup>14</sup></a>
+						<a class="filter__item">Design<sup>6</sup></a>
+						<a class="filter__item">Branding<sup>4</sup></a>
+						<a class="filter__item">Illustration<sup>3</sup></a>
+						<a class="filter__item">Motion<sup>1</sup></a>
+					</div>
+					<div class="portfolio__products products">
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-1.webp" alt="Product 1">
+							<div class="products__overlay">
+								<div class="products__label">design</div>
+								<h3 class="products__title products__title--uppercase">sofa</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-2.webp" alt="Product 2">
+							<div class="products__overlay">
+								<div class="products__label">branding</div>
+								<h3 class="products__title">KeyBoard</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-3.webp" alt="Product 3">
+							<div class="products__overlay">
+								<div class="products__label">illustration</div>
+								<h3 class="products__title">work media</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-4.webp" alt="Product 4">
+							<div class="products__overlay">
+								<div class="products__label">motion</div>
+								<h3 class="products__title">DDDone</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-1.webp" alt="Product 5">
+							<div class="products__overlay">
+								<div class="products__label">design </div>
+								<h3 class="products__title products__title--uppercase">sofa</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-2.webp" alt="Product 6">
+							<div class="products__overlay">
+								<div class="products__label">branding</div>
+								<h3 class="products__title">KeyBoard</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-3.webp" alt="Product 7">
+							<div class="products__overlay">
+								<div class="products__label">illustration</div>
+								<h3 class="products__title">work media</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-4.webp" alt="Product 8">
+							<div class="products__overlay">
+								<div class="products__label">motion</div>
+								<h3 class="products__title">DDDone</h3>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__button"><a class="button button--dark-secondary">explore more</a></div>
+				</div>
+			</div>
+
+			<!-- *GET STARTED -->
+			<div class="page__get-started get-started">
+				<div class="get-started__container">
+					<div class="get-started__block">
+						<div class="get-started__column">
+							<div class="get-started__present-icon">
+								<img src="img/get-started/present.svg" alt="Present">
+							</div>
+							<div class="get-started__label label">get started</div>
+							<h4 class="get-started__title">we help companies move faster</h4>
+							<a class="get-started__button button button--light-primary">contact us</a>
+						</div>
+						<div class="get-started__column">
+							<div class="get-started__shape-card">
+								<img src="img/get-started/shape-of-card.svg" alt="Shape of card">
+							</div>
+						</div>
+						<div class="get-started__column">
+							<img src="img/get-started/girl.webp" alt="Girl">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- *EVENTS -->
+			<div class="page__events events">
+				<div class="events__container">
+					<h5 class="events__label label">events</h5>
+					<h2 class="events__title title">explore future conferences</h2>
+					<div class="events__items">
+						<div class="events__item item-events">
+							<div class="item-events__date">
+								<div class="item-events__day">3</div>
+								<div class="item-events__on-date">
+									<div class="item-events__month">november</div>
+									<div class="item-events__year">2021</div>
+								</div>
+							</div>
+							<div class="item-events__duration">9:00 am - 3:00 pm</div>
+							<hr class="item-events__splitter">
+							<h4 class="item-events__name">design weeks</h4>
+							<div class="item-events__describe">
+								digital agency is a business you hire to outsource your digital.
+							</div>
+							<a class="item-events__link" href="#">explore now</a>
+						</div>
+						<div class="events__item item-events">
+							<div class="item-events__date">
+								<div class="item-events__day">15</div>
+								<div class="item-events__on-date">
+									<div class="item-events__month">november</div>
+									<div class="item-events__year">2021</div>
+								</div>
+							</div>
+							<div class="item-events__duration">1:00 pm - 8:00 pm</div>
+							<hr class="item-events__splitter">
+							<h4 class="item-events__name">interior design</h4>
+							<div class="item-events__describe">
+								marketing efforts, instead of handling in-house.
+							</div>
+							<a class="item-events__link" href="#">explore now</a>
+						</div>
+						<div class="events__item item-events">
+							<div class="item-events__date">
+								<div class="item-events__day">2</div>
+								<div class="item-events__on-date">
+									<div class="item-events__month">december</div>
+									<div class="item-events__year">2021</div>
+								</div>
+							</div>
+							<div class="item-events__duration">10:00 am - 2:00 pm</div>
+							<hr class="item-events__splitter">
+							<h4 class="item-events__name">The F design events.</h4>
+							<div class="item-events__describe">
+								provide your business with a variety of digital solutions to promote.
+							</div>
+							<a class="item-events__link" href="#">explore now</a>
+						</div>
+					</div>
+					<div class="events__button">
+						<a class="button button--dark-secondary">explore more</a>
+					</div>
+				</div>
+			</div>
+
+			<!--* TEAM -->
+			<div class="page__team team">
+				<div class="team__container">
+					<div class="team__header header-team">
+						<div class="header-team__block">
+							<h5 class="team__label label">our team</h5>
+							<h2 class="team__title title">team of designers and developers</h2>
+						</div>
+						<div class="header-team__slider-arrows">
+							<a href="#">
+								<div class="header-team__slider-arrow">
+									<img src="img/team/arrow-left.svg" alt="Left arrow icon">
+								</div>
+							</a>
+							<a href="#">
+								<div class="header-team__slider-arrow">
+									<img src="img/team/arrow-right.svg" alt="Right arrow icon">
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="team__items">
+						<div class="team__item">
+							<div class="team__picture">
+								<img src="img/team/member-1.webp" alt="Azah Anyeni">
+							</div>
+							<div class="team__name">azah anyeni</div>
+							<div class="team__position">designer</div>
+						</div>
+						<div class="team__item">
+							<div class="team__picture">
+								<img src="img/team/member-2.webp" alt="Roelof Bekkenenks">
+							</div>
+							<div class="team__name">roelof bekkenenks</div>
+							<div class="team__position">react developer</div>
+						</div>
+						<div class="team__item">
+							<div class="team__picture">
+								<img src="img/team/member-3.webp" alt="Leonardo Oliveira">
+							</div>
+							<div class="team__name">leonardo oliveira</div>
+							<div class="team__position">illustrator</div>
+						</div>
+						<div class="team__item">
+							<div class="team__picture">
+								<img src="img/team/member-4.webp" alt="Izabella Tabakova">
+							</div>
+							<div class="team__name">Izabella Tabakova</div>
+							<div class="team__position">product designer</div>
+						</div>
+					</div>
+					<div class="team__slider-points slider-points">
+						<a href="#" class="slider-points__item slider-points__item--active"></a>
+						<a href="#" class="slider-points__item"></a>
+						<a href="#" class="slider-points__item"></a>
+					</div>
+				</div>
+			</div>
+
+			<!--* Founder Words -->
+			<div class="page__founder-words founder-words">
+				<div class="founder-words__container">
+					<div class="founder-words__block">
+						<div class="founder-words__person-picture">
+							<img src="img/founder-words/founder.webp" alt="Ren Delan - founder of digital agency">
+						</div>
+						<div class="founder-words__info">
+							<div class="founder-words__label label">founder words</div>
+							<h3 class="founder-words__quote">
+								digital agency is a business you hire to outsource your digital marketing efforts
+							</h3>
+							<div class="founder-words__autor">ren delan</div>
+							<div class="founder-words__position">founder</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<span>© 2024 Gregory Mosia</span>
+			</div>
+		</footer>
+	</div>
 </body>
 
 </html>
