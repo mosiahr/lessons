@@ -53,6 +53,13 @@ DEFAULT_STYLE_CSS = \
 /* Keyframes */
 @import url('keyframes.css');
 
+body {
+    font-family: none, sans-serif;
+}
+textarea {
+    resize: vertical;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -142,6 +149,16 @@ input[type="email"],
 input[type="tel"],
 textarea {
 	appearance: none;
+}
+/* Для Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Для Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 '''
 
