@@ -103,15 +103,16 @@ body {
     max-inline-size: none;
 }
 .portfolio__filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px 60px;
-    justify-content: center;
     margin-block-end: 68px;
 }
 .filter {
+	display: flex;
+    flex-wrap: wrap;
+    gap: 15px 60px;
+    justify-content: center;
     text-align: center;
 }
+
 .filter__item {
     color: rgba(255, 255, 255, 0.64);
     line-height: 2;
@@ -131,6 +132,49 @@ body {
 .filter__item:hover {
     color: #FFF;
     transform: scale(1.05);
+}
+.portfolio__select {
+	display: none;
+}
+.select-portfolio {
+	margin: 0 auto 20px;
+}
+
+@media (max-width: 991.98px) {
+	.portfolio {
+		padding-block-start: 48px;
+	}
+	.portfolio__label {
+		margin-block-end: 12px;
+	}
+	.portfolio__title {
+		margin-block-end: 20px;
+	}
+	.title {
+		font-size: 48px;
+	}
+	.portfolio__filter {
+		margin-block-end: 36px;
+	}
+	.filter {
+		column-gap: 30px;
+	}
+}
+@media (max-width: 767.98px) {
+	.portfolio__filter {
+		margin-block-end: 24px;
+	}
+	.filter {
+		column-gap: 20px;
+	}
+}
+@media (max-width: 509.98px) {
+	.portfolio__select {
+		display: block;
+	}
+	.portfolio__filter  {
+		display: none;
+	}
 }
 
 /** Portfolio Products */
@@ -391,20 +435,6 @@ body {
 	.get-started__block {
 		padding-block-start: 88px;
 	}
-}
-@media (max-width: 686.98px) {
-	.get-started__shape-card {
-		/* justify-content: center; */
-	}
-	/* .get-started__shape-card img{
-		max-width: 100%;
-		aspect-ratio: 338/176;
-	}
-	.get-started__shape-card::before {
-		width: 306px;
-		max-width: 100%;
-	} */
-
 }
 
 
