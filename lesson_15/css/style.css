@@ -132,23 +132,6 @@ body {
     color: #FFF;
     transform: scale(1.05);
 }
-.portfolio__select {
-	margin-block-end: 48px;
-}
-.select-portfolio {
-	appearance: none;
-	color: rgba(57, 20, 0, 0.64);
-	font-size: 16px;
-	line-height: 2;
-	padding: 9px 16px 7px;
-	width: 100%;
-	border-radius: 6px;
-	text-transform: capitalize;
-}
-.select-portfolio:focus-visible {
-	border: 2px solid #EF6D58;
-	outline: none;
-}
 
 @media (max-width: 991.98px) {
 	.portfolio__filter {
@@ -177,11 +160,40 @@ body {
 	}
 }
 @media (max-width: 509.98px) {
-	.portfolio__select {
-		display: block;
-	}
 	.portfolio__filter  {
 		display: none;
+	}
+	.portfolio__wrapper-select {
+		position: relative;
+	}
+	.portfolio__wrapper-select::after {
+		content: "";
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-color: #EF6D58 transparent transparent transparent;
+		position: absolute;
+		inset-block-start: 21px;
+		inset-inline-end: 16px;
+		color: #EF6D58;
+		z-index: 1;
+	}
+	.portfolio__select {
+		margin-block-end: 48px;
+	}
+	.select-portfolio {
+		appearance: none;
+		color: rgba(57, 20, 0, 0.64);
+		font-size: 16px;
+		line-height: 2;
+		padding: 9px 16px 7px;
+		width: 100%;
+		border-radius: 6px;
+		text-transform: capitalize;
+	}
+	.select-portfolio:focus-visible {
+		border: 2px solid #EF6D58;
+		outline: none;
 	}
 }
 @media not (max-width: 509.98px) {
@@ -189,7 +201,6 @@ body {
 		display: none;
 	}
 }
-
 
 /** Portfolio Products */
 .portfolio__products {
