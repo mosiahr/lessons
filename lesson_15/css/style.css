@@ -112,7 +112,6 @@ body {
     justify-content: center;
     text-align: center;
 }
-
 .filter__item {
     color: rgba(255, 255, 255, 0.64);
     line-height: 2;
@@ -134,25 +133,24 @@ body {
     transform: scale(1.05);
 }
 .portfolio__select {
-	display: none;
+	margin-block-end: 48px;
 }
 .select-portfolio {
-	margin: 0 auto 20px;
+	appearance: none;
+	color: rgba(57, 20, 0, 0.64);
+	font-size: 16px;
+	line-height: 2;
+	padding: 9px 16px 7px;
+	width: 100%;
+	border-radius: 6px;
+	text-transform: capitalize;
+}
+.select-portfolio:focus-visible {
+	border: 2px solid #EF6D58;
+	outline: none;
 }
 
 @media (max-width: 991.98px) {
-	.portfolio {
-		padding-block-start: 48px;
-	}
-	.portfolio__label {
-		margin-block-end: 12px;
-	}
-	.portfolio__title {
-		margin-block-end: 20px;
-	}
-	.title {
-		font-size: 48px;
-	}
 	.portfolio__filter {
 		margin-block-end: 36px;
 	}
@@ -161,6 +159,16 @@ body {
 	}
 }
 @media (max-width: 767.98px) {
+	.portfolio__label {
+		margin-block-end: 17px;
+	}
+	.portfolio__title {
+		margin-block-end: 35px;
+	}
+	.title {
+		font-size: 40px;
+		line-height: 1.2;
+	}
 	.portfolio__filter {
 		margin-block-end: 24px;
 	}
@@ -176,6 +184,12 @@ body {
 		display: none;
 	}
 }
+@media not (max-width: 509.98px) {
+	.portfolio__select {
+		display: none;
+	}
+}
+
 
 /** Portfolio Products */
 .portfolio__products {
