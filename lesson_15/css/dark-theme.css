@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+/* Keyframes */
+@import url('keyframes.css');
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: clip;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"] {
+    margin: 0 auto;
+    max-width: 1628px;
+	padding-inline: 15px;
+}
+
+
+
+.header {
+    background-color: #1E1E1E;
+}
+.header__block {
+	padding-block-start: 20px;
+}
+.header__block > hr {
+	border: 1px solid #FFF;
+}
+
+.page {
+    background-color: #1E1E1E;
+}
+.page__movies {
+	margin-block-end: 140px;
+}
+.movies {
+    padding-block-start: 92px;
+}
+
+
+.portfolio__label {
+    margin-block-end: 20px;
+    text-align: center;
+}
+.label {
+    color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+.portfolio__title {
+    margin: 0 auto 36px;
+    text-align: center;
+}
+.title {
+    color: #FFF;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.14;
+    max-inline-size: 531px;
+    text-transform: capitalize;
+}
+.header__title--long {
+    max-inline-size: none;
+}
+
+
+
+
+
+
+
+/** FOOTER */
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    padding-block: 15px;
+    text-align: center;
+}

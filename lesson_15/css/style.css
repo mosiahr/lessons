@@ -509,6 +509,9 @@ body {
 }
 
 @media (max-width: 479.98px) {
+	.page__get-started {
+		margin-block-end: 100px;
+	}
 	/* Col 2 */
 	.get-started__column:nth-child(2) {
 		max-width: 274px;
