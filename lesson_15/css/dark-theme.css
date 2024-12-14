@@ -40,15 +40,7 @@ body {
 	border: 1px solid #FFF;
 }
 
-.page {
-    background-color: #1E1E1E;
-}
-.page__movies {
-	margin-block-end: 140px;
-}
-.movies {
-    padding-block-start: 92px;
-}
+
 
 
 .portfolio__label {
@@ -79,6 +71,137 @@ body {
 }
 
 
+.page {
+    background-color: #1E1E1E;
+}
+/* .page__movies {
+	margin-block-end: 140px;
+}
+.movies {
+    padding-block-start: 92px;
+} */
+
+
+.page {
+}
+.page__movies-shows {
+}
+.movies-shows {
+}
+.movies-shows__container {
+}
+.movies-shows__movies {
+}
+.movies {
+    padding-block-start: 50px;
+}
+.movies__block {
+	border-radius: 12px;
+	border: 1px solid #262626;
+	padding: 50px;
+}
+.movies__header {
+}
+.header-movies-shows {
+}
+.header-movies-shows__title {
+	color: #FFF;
+	font-family: Manrope;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-block-end: 50px;
+}
+.header-movies-shows__buttons {
+}
+.header-movies-shows__left-arrow {
+}
+.header-movies-shows__lines {
+}
+.header-movies-shows__right-arrow {
+}
+.movies__items {
+}
+.items-movies {
+	display: flex;
+	column-gap: 20px;
+	justify-content: space-between;
+}
+.items-movies__item {
+	flex: 0 1 calc(360/1598 * 100%);
+	border-radius: 12px;
+	border: 1px solid #262626;
+	background: #1A1A1A;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	
+}
+.items-movies__img {
+	flex: 1 1 320px;
+	border-radius: 12px;
+	/* border: 1px solid #1A1A1A; */
+    aspect-ratio: 320 / 404;
+	
+}
+.items-movies__img img {
+    aspect-ratio: 320 / 404;
+	width: 100%;
+
+	/* object-fit: cover; */
+}
+.items-movies__info {
+	display: flex;
+	justify-content: space-between;
+
+}
+.items-movies__lenght {
+	color: #999;
+	font-weight: 500;
+	line-height: 1.5;
+	padding: 6px 10px 6px 6px;
+	border-radius: 51px;
+	border: 1px solid #262626;
+	background: #141414;
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	flex-shrink: 0;
+}
+.items-movies__lenght::before {
+	content: "";
+	background: url('../img/dark-theme/watch-ico.svg') 0 0 / 20px no-repeat;
+	inline-size: 20px;
+	block-size: 20px;
+}
+.items-movies__rank {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	padding: 6px 10px;
+	border-radius: 51px;
+	border: 1px solid #262626;
+	background: #141414;
+}
+.items-movies__stars {
+	display: flex;
+	gap: 2px;
+}
+.items-movies__text {
+	color: #999;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.movies-and-shows__shows {
+}
+.shows {
+}
+.shows__block {
+}
+.shows__header {
+}
 
 
 
