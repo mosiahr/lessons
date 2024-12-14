@@ -119,42 +119,52 @@ body {
 .header-movies-shows__lines {
 }
 .header-movies-shows__right-arrow {
+	
 }
 .movies__items {
 }
 .items-movies {
 	display: flex;
-	column-gap: 20px;
+	gap: 20px;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .items-movies__item {
-	flex: 0 1 calc(360/1598 * 100%);
+	flex: 1 1 calc(360/1598 * 100%);
 	border-radius: 12px;
 	border: 1px solid #262626;
 	background: #1A1A1A;
 	padding: 20px;
+	row-gap: 20px;
 	display: flex;
 	flex-direction: column;
-	row-gap: 20px;
-	
+	transition: all 0.3s;
+	/* max-inline-size: 360px; */
 }
+@media (any-hover: hover){
+	.items-movies__item:hover {
+		border-color: #fdf0e9;
+	}
+}
+
+
 .items-movies__img {
-	flex: 1 1 320px;
+	/* flex: 1 1 320px; */
+	flex: 1 1 calc(320/1598 * 100%);
 	border-radius: 12px;
-	/* border: 1px solid #1A1A1A; */
     aspect-ratio: 320 / 404;
-	
 }
 .items-movies__img img {
     aspect-ratio: 320 / 404;
 	width: 100%;
-
-	/* object-fit: cover; */
+	object-fit: cover;
+	border-radius: 12px;
+	/* box-shadow: 2px 2px 2px 1px rgb(0 0 0); */
+	/* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 }
 .items-movies__info {
 	display: flex;
 	justify-content: space-between;
-
 }
 .items-movies__lenght {
 	color: #999;
@@ -167,13 +177,14 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 2px;
-	flex-shrink: 0;
+	flex-shrink: 1;
+	white-space: nowrap;
 }
 .items-movies__lenght::before {
 	content: "";
-	background: url('../img/dark-theme/watch-ico.svg') 0 0 / 20px no-repeat;
-	inline-size: 20px;
-	block-size: 20px;
+	background: url('../img/dark-theme/watch-ico.svg') 0 0 / 24px no-repeat;
+	inline-size: 24px;
+	block-size: 24px;
 }
 .items-movies__rank {
 	display: flex;
@@ -184,6 +195,7 @@ body {
 	border: 1px solid #262626;
 	background: #141414;
 }
+
 .items-movies__stars {
 	display: flex;
 	gap: 2px;
@@ -203,9 +215,41 @@ body {
 .shows__header {
 }
 
-
-
-
+@media (max-width: 1420px) {
+	.header-movies-shows__title {
+		margin-block-end: 20px;
+	}
+	.movies__block {
+		padding: 16px;
+	}
+	.items-movies {
+		gap: 16px;
+	}
+	.items-movies__item {
+		padding: 12px;
+		row-gap: 12px;
+	}
+	.items-movies__lenght, .items-movies__text {
+		font-size: 12px;
+	}
+	.items-movies__lenght::before {
+		inline-size: 20px;
+		block-size: 20px;
+		background-size: 20px;
+	}
+	.items-movies__stars {
+		max-block-size: 14px;
+		gap: 1px;
+	}
+}
+@media (min-width: 865px) and (max-width: 1299.98px) {
+	.items-movies__item {
+		max-inline-size: 32%;
+	}
+}
+@media (max-width: 767.98px) {
+	
+}
 
 /** FOOTER */
 .footer {
