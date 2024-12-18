@@ -33,6 +33,7 @@ body {
 .header__block {
 	padding-block-start: 20px;
 }
+
 .header__block > hr {
 	border: 1px solid #FFF;
 }
@@ -49,6 +50,26 @@ body {
 .portfolio__title {
     margin: 0 auto 36px;
     text-align: center;
+}
+.header__line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-block-end: 10px;
+}
+.header__link {
+    color: #FFF;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+	text-decoration: underline;
+}
+@media (any-hover: hover){
+	.header__link:hover {
+		color: #EF6D58;
+		transform: scale(1.05);
+	}
 }
 .title {
     color: #FFF;

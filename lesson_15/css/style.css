@@ -90,6 +90,14 @@ body {
     margin: 0 auto 36px;
     text-align: center;
 }
+.header__line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-block-end: 10px;
+}
 .title {
     color: #FFF;
     font-size: 56px;
@@ -102,6 +110,20 @@ body {
 .header__title--long {
     max-inline-size: none;
 }
+.header__link {
+    color: #FFF;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+	text-decoration: underline;
+
+}
+@media (any-hover: hover){
+	.header__link:hover {
+		color: #EF6D58;
+		transform: scale(1.05);
+	}
+}
+
 .portfolio__filter {
     margin-block-end: 68px;
 }
@@ -117,6 +139,7 @@ body {
     line-height: 2;
     text-transform: capitalize;
     transition-duration: 0.3s;
+	cursor: pointer;
 }
 .filter__item sup {
     display: inline-block;
@@ -197,7 +220,7 @@ body {
 		outline: none;
 	}
 }
-@media not (max-width: 509.98px) {
+@media (min-width: 509.98px) {
 	.portfolio__select {
 		display: none;
 	}

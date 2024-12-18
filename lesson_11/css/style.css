@@ -34,14 +34,8 @@ body {
     line-height: 2;
     text-transform: uppercase;
 }
-.header__title {
-    font-size: 72px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    line-height: 1.11;
-    margin-block-end: 24px;
-    text-transform: capitalize;
-}
+
+
 .page {
 }
 .page__container {
