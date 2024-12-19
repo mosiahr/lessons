@@ -389,7 +389,7 @@ body {
 	.products__item:nth-child(n) {
 		height: 100%;
 		aspect-ratio: 329 / 416;
-		flex-basis: 329;
+		flex-basis: 329px;
 		flex-grow: 1;
 		gap: 32px;
 	}
@@ -924,7 +924,7 @@ body {
 @media (max-width: 1199.98px){
 	.founder-words__block {
 		gap: 41px 30px;
-		align-items: top;
+		align-items: flex-start;
 	}
 	.founder-words__info {
 		align-self: flex-start;
