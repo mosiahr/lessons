@@ -711,12 +711,12 @@ body {
 }
 .header-team__block {
 }
-.team__label {
+.header-team__label {
 	margin-block-end: 20px;
 }
 .label {
 }
-.team__title {
+.header-team__title {
 }
 .title {
 }
@@ -818,7 +818,7 @@ body {
 	.team__header {
 		margin-block-end: 40px;
 	}
-	.team__label {
+	.header-team__label {
 		margin-block-end: 17px;
 	}
 	.team__slider-points {

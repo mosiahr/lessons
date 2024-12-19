@@ -89,12 +89,10 @@ body {
 .movies {
     padding-block-start: 50px;
 }
-.movies-shows__block {
+.movies__block, .shows__block {
 	border-radius: 12px;
 	border: 1px solid #262626;
 	padding: 50px;
-}
-.movies-shows__block {
 	margin-block-end: 150px;
 	position: relative;
 }
@@ -249,8 +247,6 @@ body {
 }
 .shows {
 }
-.movies-shows__block {
-}
 .button {
 	padding: 10px 24px;
 	align-items: center;
@@ -400,7 +396,7 @@ body {
 	background: #E50000;
 }
 @media (max-width: 1420px) {
-	.movies-shows__block {
+	.movies__block, .shows__block {
 		padding: 40px;
 	}
 	.button {
@@ -448,7 +444,7 @@ body {
 		background: #E50000;
 		flex: 1 0 18px;
 	}
-	.movies__block {
+	.movies__block, .shows__block {
 		padding: 16px;
 	}
 	.items-movies {
@@ -498,7 +494,7 @@ body {
 	.header-movies-shows__slider {
 		display: none;
 	}
-	.movies-shows__block {
+	.movies__block, .shows__block {
 		border: 0;
 		padding: 0;
 		margin-block-end: 50px;
