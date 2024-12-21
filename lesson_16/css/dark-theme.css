@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700);
+
 /* Local fonts */
 @import url('fonts.css');
 
@@ -8,7 +10,10 @@
 @import url('keyframes.css');
 
 body {
-    font-family: none, sans-serif;
+    font-family: "Manrope", sans-serif;
+	font-size: 18px;
+	color: #999;
+	background: #141414;
 }
 textarea {
     resize: vertical;
@@ -24,10 +29,66 @@ textarea {
     flex-grow: 1;
 }
 [class*="__container"] {
-    max-width: 1170px;
+    max-width: 1630px;
 	margin: 0 auto;
 	padding-inline: 15px;
 }
+
+
+.header {
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-block-size: 120px;
+	padding-block: 10px;
+	gap: 15px;
+}
+.header__logo {
+	flex-basis: 200px;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__bady {
+}
+.menu__list {
+	display: flex;
+	column-gap: 6px; 
+	align-items: center;
+}
+.menu__item {
+}
+.menu__link {
+	color: #BFBFBF;
+	line-height: 1.5;
+	padding: 14px 24px;
+}
+.header__actions {
+}
+.actions-header {
+	flex-basis: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 40px;
+	row-gap: 3px;
+	justify-content: flex-end;
+}
+.actions-header__item {
+}
+.actions-header__icon {
+}
+.icon-menu {
+}
+@media (min-width: 992px){
+	.icon-menu {
+		display: none;
+	}
+}
+
+
 
 .footer {
     background-color: #fdf0e9;
