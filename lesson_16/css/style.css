@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800,900);
+
 /* Local fonts */
 @import url('fonts.css');
 
@@ -8,7 +10,7 @@
 @import url('keyframes.css');
 
 body {
-    font-family: none, sans-serif;
+    font-family: Epilogue, sans-serif;
 }
 textarea {
     resize: vertical;
@@ -24,10 +26,166 @@ textarea {
     flex-grow: 1;
 }
 [class*="__container"] {
-    max-width: 1170px;
+    max-width: 1200px;
 	margin: 0 auto;
 	padding-inline: 15px;
 }
+.header {
+	color: #FFF;
+	background-color: #28293E;
+	padding-block: 16px;
+}
+.header__container {
+}
+.header__nav {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-block-end: 124px;
+}
+.header__logo {
+	display: inline-flex;
+	column-gap: 14px;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1.33;
+}
+.header__menu {
+}
+.menu {
+}
+.menu__icon {
+}
+.icon-menu {
+}
+.menu__body {
+}
+.menu__list {
+	display: flex;
+	column-gap: 105px;
+	align-items: center;
+	justify-content: space-between;
+	line-height: 2;
+	flex-wrap: wrap;
+}
+.menu__item {
+}
+.menu__link {
+}
+.link {}
+.header__actions {
+}
+.actions-header {
+}
+.actions-header__button {
+	min-inline-size: 138px;
+	max-inline-size: 300px;
+}
+.button {
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    min-block-size: 48px;
+    padding-block-end: 16px;
+    padding-block-start: 18px;
+    padding-inline: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+.button--grey-border {
+    border: 1px solid rgba(255, 255, 255, 0.30);
+}
+.button--grey-border:hover {
+	background-color: #B550F8;
+	border-color: #28293E;
+}
+
+
+.header__body {
+}
+.header__text-block {
+}
+.text-block {
+}
+.text-block__label {
+}
+.label {
+}
+.text-block__title {
+}
+.title {
+}
+.text-block__describe {
+}
+.text-block__links {
+}
+.text-block__button {
+}
+.button {
+}
+.text-block__link {
+}
+.link {
+}
+.link {
+    line-height: 2;
+    text-align: center;
+    text-transform: capitalize;
+}
+.link:hover {
+    text-decoration: underline;
+}
+.text-block__quote {
+}
+.quote {
+}
+.quote__avatar {
+}
+.avatar {
+}
+.avatar__img {
+}
+.quote__block {
+}
+.quote__text {
+}
+.quote__author {
+}
+.header__img-block {
+}
+.img-block {
+}
+.img-block__dark-circle {
+}
+.circle-dark {
+}
+.img-block__laptop {
+}
+.archway {
+}
+.archway--purple {
+}
+.img-block__stars {
+}
+.img-block__cloud {
+}
+.img-block__girl {
+}
+.archway--golden {
+}
+.img-block__arrow {
+}
+.img-block__card {
+}
+.img-block__wavy-arrow {
+}
+
+
 
 .footer {
     background-color: #fdf0e9;
