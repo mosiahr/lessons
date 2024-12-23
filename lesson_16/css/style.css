@@ -70,6 +70,8 @@ textarea {
 	justify-content: space-between;
 	line-height: 2;
 	flex-wrap: wrap;
+	row-gap: 3px;
+
 }
 .menu__item {
 }
@@ -79,6 +81,12 @@ textarea {
 .header__actions {
 }
 .actions-header {
+	min-inline-size: 152px;
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	row-gap: 3px;
+	justify-content: flex-end;
 }
 .actions-header__button {
 	min-inline-size: 138px;
@@ -109,24 +117,63 @@ textarea {
 .header__body {
 }
 .header__text-block {
+	/* display: inline-block;
+    margin-block-end: 20px;
+    margin-inline-end: 87px; */
+    position: relative;
+    z-index: 0;
 }
 .text-block {
+	/* inline-size: 43.85%; */
+    max-inline-size: 513px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
+}
+.text-block__star {
+	block-size: 146px;
+    inset-block-start: 22px;
+    inset-inline-start: 278px;
+    position: absolute;
+    inline-size: 148px;
+    z-index: -1;
 }
 .text-block__label {
 }
 .label {
+	color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
 }
 .text-block__title {
 }
 .title {
+	font-size: 72px;
+	font-weight: 800;
+	line-height: 1.11;
+	letter-spacing: -2px;
+	text-transform: capitalize;
 }
 .text-block__describe {
+	color: rgba(255, 255, 255, 0.64);
+	line-height: 2;
+	margin-block-end: 10px;
 }
 .text-block__links {
+    margin-block-end: 84px;
 }
 .text-block__button {
+    margin-inline-end: 46px;
+	min-inline-size: 154px;
 }
 .button {
+}
+.button--background-sunrise-orange {
+    background: #EF6D58;
+}
+.button--background-sunrise-orange:hover {
+    background: #ED5B44;
 }
 .text-block__link {
 }
@@ -143,18 +190,36 @@ textarea {
 .text-block__quote {
 }
 .quote {
+	display: flex;
+	column-gap: 16px;
+	align-items: start;
 }
 .quote__avatar {
 }
 .avatar {
+	background-color: #B550F6;
+	border-radius: 50%;
+	inline-size: 48px;
+	block-size: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	overflow: hidden;
+	flex: 0 0 48px;
 }
 .avatar__img {
+	inline-size: 38px;
+	aspect-ratio: 38 / 43;
 }
 .quote__block {
+
 }
 .quote__text {
+	color: rgba(255, 255, 255, 0.64);
+	line-height: 2;
 }
 .quote__author {
+	line-height: 2;
 }
 .header__img-block {
 }
