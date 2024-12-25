@@ -1,0 +1,42 @@
+@keyframes rotate-element {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes move-element {
+    0% {
+        transform: translate(0,0);
+    }
+	20% {
+        transform: translate(0, 10px);
+    }
+    40% {
+        transform: translate(10px, 0);
+    }
+	60% {
+        transform: translate(0, -10px);
+    }
+	80% {
+        transform: translate(-10px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes move-element-left-right {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(15px);
+    }
+	80% {
+        transform: translateX(-15px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
