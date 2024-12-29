@@ -80,7 +80,16 @@ textarea {
 }
 .menu__link {
 }
-.link {}
+.link {
+    line-height: 2;
+    text-align: center;
+    text-transform: capitalize;
+}
+@media (any-hover: hover){
+	.link:hover {
+		text-decoration: underline;
+	}
+}
 .header__actions {
 }
 .actions-header {
@@ -183,9 +192,7 @@ textarea {
 }
 .text-block__link {
 }
-.link {
-}
-.link {
+/* .link {
     line-height: 2;
     text-align: center;
     text-transform: capitalize;
@@ -194,7 +201,7 @@ textarea {
 	.link:hover {
 		text-decoration: underline;
 	}
-}
+} */
 
 /** IMG BLOCK */
 .header__img-block {
@@ -233,6 +240,7 @@ textarea {
 	inset-block-start: 9.75%;
 	inline-size: 103.6%;
 	aspect-ratio: 255 / 265;
+	object-fit: contain;
 }
 .img-block__stars {
 	inline-size: 19.65%; /* 112 / 570 */
@@ -248,6 +256,7 @@ textarea {
 .img-block__stars img {
     inline-size: 37.5%;
 	aspect-ratio: 42 / 56;
+	object-fit: contain;
 	animation: move-element 20s linear infinite;
 }
 .img-block__cloud {
@@ -262,6 +271,7 @@ textarea {
 .img-block__cloud img {
 	inline-size: 100%;
 	aspect-ratio: 112 / 82;
+	object-fit: contain;
 }
 .img-block__girl {
 	background: #F7CC47;
@@ -271,7 +281,6 @@ textarea {
 	inset-block-start: 31.39%;  /* 189 / 602 */
     inset-inline-end: 0;
     position: absolute;
-	/* object-fit: cover; */
 	overflow: hidden;
 	animation: move-element 23s linear 2s infinite;
 }
@@ -281,6 +290,7 @@ textarea {
 	inline-size: 100%;
 	aspect-ratio: 246 / 269;
 	border-radius: 6px;
+	object-fit: contain;
 }
 .img-block__arrow {
 	position: absolute;
@@ -294,6 +304,7 @@ textarea {
 .img-block__arrow img {
 	inline-size: 100%; /* 94/570 */
 	aspect-ratio: 94 / 35;
+	object-fit: contain;
 }
 .img-block__card {
 	position: absolute;
@@ -339,6 +350,7 @@ textarea {
 .img-block__wavy-arrow img{
 	inline-size: 100%;
 	aspect-ratio: 142 / 73;
+	object-fit: contain;
 }
 
 /** QUOTE */
@@ -441,9 +453,9 @@ textarea {
 	}
 }
 @media (max-width: 709.98px) {
-	/* .header__menu {
-		display: none;
-	} */
+	.open-menu body {
+		overflow: hidden;
+	}
 	.actions-header {
 		min-block-size: 48px;
 	}
@@ -515,6 +527,7 @@ textarea {
 		background-color: #28293E;
 		transition: inset-inline-start 0.3s;
 	}
+
 	.open-menu .menu__body,
 	.open-menu .menu__body::before {
 		inset-inline-start: 0;
