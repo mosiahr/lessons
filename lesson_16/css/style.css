@@ -81,15 +81,32 @@ textarea {
 .menu__link {
 }
 .link {
+	position: relative;
     line-height: 2;
     text-align: center;
     text-transform: capitalize;
 }
+.link::before {
+	content: '';
+	position: absolute;
+	inline-size: 0;
+	block-size: 2px;
+	background-color: #fff;
+	inset-inline-start: 0;
+	inset-block-end: 0;
+	transition: inline-size 0.3s;
+}
 @media (any-hover: hover){
+	.link:hover::before {
+		inline-size: 100%;
+		transition: inline-size 0.5s;
+	}
+}
+/* @media (any-hover: hover){
 	.link:hover {
 		text-decoration: underline;
 	}
-}
+} */
 .header__actions {
 }
 .actions-header {
