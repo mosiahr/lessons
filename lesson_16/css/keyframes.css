@@ -113,7 +113,7 @@
 @keyframes close-down {
 	0% {
 		transform-origin: 100% 100%;
-		transform: rotate(25deg);
+		transform: rotate(30deg);
     }
 	25% {
 		transform: rotate(0deg);
@@ -129,7 +129,7 @@
 @keyframes close-up {
 	0% {
 		transform-origin: 100% 100%;
-		transform: rotate(-25deg);
+		transform: rotate(-30deg);
     }
 	25% {
 		transform: rotate(0deg);
