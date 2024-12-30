@@ -170,7 +170,7 @@ textarea {
     inset-block-start: 3.654485%; /* 22/602 */
     inset-inline-start: 54.191033%; /* 278/513 */
     position: absolute;
-    inline-size: 148;
+    inline-size: 148px;
 	aspect-ratio: 1;
     z-index: -1;
 	animation: rotate-element linear 20s infinite;
