@@ -124,6 +124,7 @@ textarea {
 	max-inline-size: 300px;
 }
 .button {
+	position: relative;
     border-radius: 6px;
     display: inline-block;
     font-size: 14px;
@@ -135,14 +136,33 @@ textarea {
     text-align: center;
     text-transform: uppercase;
     vertical-align: middle;
+	transition: border-color 0.8s;
 }
 .button--grey-border {
     border: 1px solid rgba(255, 255, 255, 0.30);
 }
 .button--grey-border:hover {
-	background-color: #B550F8;
 	border-color: #28293E;
 }
+.button--hover-purple-background::before {
+	content: '';
+	position: absolute;
+	inline-size: 0%;
+	block-size: 100%;
+	background-color: #B550F8;
+	inset-inline-start: 0;
+	inset-block-end: 0;
+    border-radius: 6px;
+	transition: inline-size 0.35s;
+}
+.button--hover-purple-background span {
+	position: relative;
+	z-index: 1;
+}
+.button--hover-purple-background:hover:before{
+	inline-size: 100%;
+}
+
 .header__body {
 	display: flex;
 	gap: 20px;
@@ -199,26 +219,35 @@ textarea {
 .text-block__button {
 	min-inline-size: 154px; /* 154/513 */
 }
-.button {
-}
+
 .button--background-sunrise-orange {
     background: #EF6D58;
 }
-.button--background-sunrise-orange:hover {
-    background: #ED5B44;
+.button--background-sunrise-orange span {
+	transition: color 0.45s;
 }
-.text-block__link {
+.button--background-sunrise-orange::before {
+	content: '';
+	color: #391400;
+	position: absolute;
+	inline-size: 0%;
+	block-size: 100%;
+	background-color: #FFF;
+	inset-inline-start: 0;
+	inset-block-end: 0;
+    border-radius: 6px;
+	transition: inline-size 0.35s;
 }
-/* .link {
-    line-height: 2;
-    text-align: center;
-    text-transform: capitalize;
+.button--background-sunrise-orange span {
+	position: relative;
+	z-index: 1;
 }
-@media (any-hover: hover){
-	.link:hover {
-		text-decoration: underline;
-	}
-} */
+.button--background-sunrise-orange:hover:before{
+	inline-size: 100%;
+}
+.button--background-sunrise-orange:hover span {
+	color: #391400;
+}
 
 /** IMG BLOCK */
 .header__img-block {
