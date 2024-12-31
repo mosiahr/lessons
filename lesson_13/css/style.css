@@ -231,19 +231,20 @@ body {
 /** Get Started */
 .page__get-started {
     margin-block-end: 140px;
+	padding-block-start: 70px;
 }
 .get-started {
 }
 .get-started__block {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+    justify-content: space-evenly;
 	align-items: center;
     background: #FDF0E9;
     border-radius: 6px;
-    display: flex;
-    justify-content: space-evenly;
     position: relative;
     z-index: 1;
-	flex-wrap: wrap;
-	row-gap: 20px;
 }
 .get-started__present-icon {
     height: 148px;
@@ -272,6 +273,14 @@ body {
 }
 .get-started__column {
     flex: 0 1 248px;
+}
+.get-started__column:first-child {
+	padding-block: 76px;
+	max-width: 248px;
+}
+.get-started__column:nth-child(2){
+	flex-basis: 338px;
+	padding-block-end: 16px;
 }
 .get-started__column:last-child {
     margin-block-start: -60px;
@@ -305,8 +314,7 @@ body {
     position: relative;
 }
 .get-started__shape-card img {
-    height: 176px;
-    width: 338px;
+    max-width: 100%;
 }
 .get-started__shape-card::before {
     background-color: #FFF;
@@ -417,6 +425,7 @@ body {
     line-height: 2;
 	color: rgba(255, 255, 255, 0.64);
 	margin-block-end: 26px;
+	flex-grow: 1;
 }
 .item-events__describe::first-letter {
 	text-transform: uppercase;
@@ -449,6 +458,7 @@ body {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: end;
+	gap: 30px;
 }
 .header-team__block {
 }
@@ -497,17 +507,20 @@ body {
 	margin-block-end: 52px;
 }
 .team__item {
+	flex-basis: 270px;
 }
 .team__picture {
 	display: flex;
-	inline-size: 270px;
-	block-size: 272px;
+	min-block-size: 272px;
 	border-radius: 6px;
 	border: 1px solid #3A3C56;
 	text-align: center;
 	justify-content: center;
-	align-items: end;
+	align-items: flex-end;
 	margin-block-end: 25px;
+}
+.team__picture img {
+	max-inline-size: 100%;
 }
 .team__name {
 	color: #FFF;
