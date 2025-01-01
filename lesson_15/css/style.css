@@ -239,42 +239,25 @@ body {
 	justify-content: center;
 }
 .products__item {
-    border-radius: 6px;
-    flex-grow: 0;
-    flex-shrink: 1;
-    overflow: hidden;
     position: relative;
+	flex: 1 1 40%;  /* calc(470 / 1170 * 100% */
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 470 / 416;
 }
 .products__item img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
-.products__item:nth-child(4n),
-.products__item:nth-child(4n+1){
-    aspect-ratio: 470 / 416;
-	flex-basis: calc(470 / 1200 * 100%);
-    /* 4*0+0, 4*0+1, 4*1+0, 4*1+1, 4*2+0, 4*2+1, 4*3+0, 4*3+1, */
-    /* 1, 4, 5, 8, 9, 12, 13 ...      */
-    /* 4n+0, 4n+1 */
-}
 .products__item:nth-child(4n+2),
 .products__item:nth-child(4n+3){
     aspect-ratio: 670 / 416;
-	flex-basis: calc(670 / 1200 * 100%);
-	/* flex-basis: 58%; */
-
+	/* flex-basis: calc(670 / 1170 * 100%); */
+	flex-basis: 56.6%;
     /* 2+4*0+0, 2+4*0+1, 2+4*1+0, 2+4*1+1, 2+4*2+0, 2+4*2+1, 2+4*3+0, 2+4*3+1 */
     /* 2, 3, 6, 7, 10, 11, 14,15 ... */
     /* 4n+2, 4n+3 */
-}
-.products__item:nth-child(4n) img,
-.products__item:nth-child(4n+1) img{
-    aspect-ratio: 470 / 416;
-}
-.products__item:nth-child(4n+2) img,
-.products__item:nth-child(4n+3) img{
-    aspect-ratio: 670 / 416;
 }
 .products__item::before {
     background: #5C2000;
@@ -302,14 +285,13 @@ body {
 .products__overlay {
     align-items: flex-start;
     display: flex;
-	/* flex-shrink: 1; */
     flex-direction: column;
-    height: 100%;
     justify-content: flex-end;
     padding: 51px 48px;
     row-gap: 24px;
     text-transform: capitalize;
     transform: translateY(-100%);
+    height: 100%;
     width: 100%;
 }
 .products__label {
@@ -340,36 +322,17 @@ body {
     margin: 0 auto;
     text-align: center;
 }
-@media (max-width: 1091.98px) {
-	.products {
-		justify-content: center;
-	}
-	.products__item:nth-child(n) {
-		height: 416px;
-		aspect-ratio: 329 / 416;
-		flex-basis: 30%;
-		flex-grow: 0;
-		gap: 10px;
-	}
-	.products__item:nth-child(n) img {
-		height: 416px;
-		aspect-ratio: 329 / 416;
-	}
-}
 @media (max-width: 919.98px) {
 	.products__item:nth-child(n) {
-		height: 416px;
-		aspect-ratio: 329 / 416;
 		flex-basis: 46%;
 		flex-grow: 1;
 		gap: 10px;
 	}
-	.products__item:nth-child(n) img {
-		height: 416px;
-		aspect-ratio: 329 / 416;
-	}
 }
 @media (max-width: 767.98px) {
+	.products__item:nth-child(n) {
+		aspect-ratio: 329 / 416;
+	}
 	.products {
 		justify-content: center;
 		gap: 15px;
@@ -387,15 +350,10 @@ body {
 		flex-direction: column;
 	}
 	.products__item:nth-child(n) {
-		height: 100%;
-		aspect-ratio: 329 / 416;
-		flex-basis: 329px;
-		flex-grow: 1;
+		flex-basis: 100%;
 		gap: 32px;
 	}
 	.products__item:nth-child(n) img {
-		height: 100%;
-		aspect-ratio: 329 / 416;
 		object-position: left;
 	}
 }
@@ -403,6 +361,7 @@ body {
 /** Get Started */
 .page__get-started {
     margin-block-end: 140px;
+	padding-block-start: 70px;
 }
 .get-started {
 }
@@ -423,20 +382,29 @@ body {
 	z-index: 0;
 }
 
+
 /** Column 1 */
+.get-started__column:first-child {
+	padding-block: 92px;
+	/* max-width: 248px; */
+}
+.get-started__column:first-child {
+	padding-block: 92px;
+}
 .get-started__present-icon {
-    block-size: 148px;
     position: absolute;
+    inline-size: 148px;
+    block-size: 148px;
     transform: translate(-50%, -50%);
 	inset-inline-start: 74px;
-	inset-block-start: calc(-1 * (148px / 2 + 15px));
-    inline-size: 148px;
+	/* inset-block-start: calc(1 * (148px / 2 + 15px)); */
+	inset-block-start: 0;
 }
 .get-started__present-icon img {
+    width: 32px;
     height: 32px;
     position: absolute;
     transform: translate(-50%, -50%);
-    width: 32px;
 	inset-block-start: 50%;
 	inset-inline-start: 50%;
 }
@@ -472,6 +440,7 @@ body {
 	z-index: 1;
 	flex: 0 1 338px;
 	position: relative;
+	padding-block-end: 16px;
 }
 .get-started__shape-card {
     box-shadow: 0px 24px 48px 0px rgba(85, 30, 0, 0.04);
@@ -531,6 +500,7 @@ body {
 }
 
 @media (max-width: 479.98px) {
+
 	.page__get-started {
 		margin-block-end: 100px;
 	}
@@ -555,11 +525,11 @@ body {
 	}
 }
 @media (max-width: 949.98px) {
+	.get-started__column:first-child {
+		padding-block-end: 0px;
+	}
 	.get-started__column:last-child {
 		margin-block-start: 0;
-	}
-	.get-started__block {
-		padding-block-start: 88px;
 	}
 }
 
