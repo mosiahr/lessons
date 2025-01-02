@@ -2,34 +2,140 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
-   <title>Lesson_17</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Lesson_17</title>
 </head>
 
 <body>
-   <div class="wrapper">
-      <header class="header">
-         <div class="header__container">
-            Header
-         </div>
-      </header>
-      <main class="page">
-         <div class="page__el el">
-            <div class="el__container">
-               <div class="el__">
-                  Main
-               </div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				Header
 			</div>
-		 </div>
-      </main>
-      <footer class="footer">
-         <div class="footer__container">
-            <span>© 2024 Gregory Mosia</span>
-         </div>
-      </footer>
-   </div>
+		</header>
+		<main class="page">
+			<div class="page__portfolio portfolio">
+				<div class="portfolio__container">
+					<h5 class="portfolio__label label">portfolio - FLEX</h5>
+					<h2 class="portfolio__title title">latest work</h2>
+					<div class="portfolio__filter filter">
+						<a class="filter__item filter__item--text-light">Show all<sup>14</sup></a>
+						<a class="filter__item">Design<sup>6</sup></a>
+						<a class="filter__item">Branding<sup>4</sup></a>
+						<a class="filter__item">Illustration<sup>3</sup></a>
+						<a class="filter__item">Motion<sup>1</sup></a>
+					</div>
+					<div class="portfolio__wrapper-select">
+						<select class="portfolio__select select-portfolio" name="portfolio__select">
+							<option class="select-portfolio__item" value="0">Show all</option>
+							<option class="select-portfolio__item" value="1">Design</option>
+							<option class="select-portfolio__item" value="2">Branding</option>
+							<option class="select-portfolio__item" value="3">Illustration</option>
+							<option class="select-portfolio__item" value="4">Motion</option>
+						</select>
+					</div>
+
+					<!--*  PRODUCTS FLEX *-->
+					<div class="portfolio__products products">
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-1.webp" alt="Product 1">
+							<div class="products__overlay">
+								<div class="products__label">design</div>
+								<h3 class="products__title products__title--uppercase">sofa</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-2.webp" alt="Product 2">
+							<div class="products__overlay">
+								<div class="products__label">branding</div>
+								<h3 class="products__title">KeyBoard</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-3.webp" alt="Product 3">
+							<div class="products__overlay">
+								<div class="products__label">illustration</div>
+								<h3 class="products__title">work media</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-4.webp" alt="Product 4">
+							<div class="products__overlay">
+								<div class="products__label">motion</div>
+								<h3 class="products__title">DDDone</h3>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__button"><a class="button button--dark-secondary">explore more</a></div>
+				</div>
+			</div>
+
+			<!--*  PORTFOLIO GRID *-->
+			<div class="page__portfolio portfolio">
+				<div class="portfolio__container">
+					<h5 class="portfolio__label label">portfolio - GRID</h5>
+					<h2 class="portfolio__title title">latest work</h2>
+					<div class="portfolio__filter filter">
+						<a class="filter__item filter__item--text-light">Show all<sup>14</sup></a>
+						<a class="filter__item">Design<sup>6</sup></a>
+						<a class="filter__item">Branding<sup>4</sup></a>
+						<a class="filter__item">Illustration<sup>3</sup></a>
+						<a class="filter__item">Motion<sup>1</sup></a>
+					</div>
+					<div class="portfolio__wrapper-select">
+						<select class="portfolio__select select-portfolio" name="portfolio__select">
+							<option class="select-portfolio__item" value="0">Show all</option>
+							<option class="select-portfolio__item" value="1">Design</option>
+							<option class="select-portfolio__item" value="2">Branding</option>
+							<option class="select-portfolio__item" value="3">Illustration</option>
+							<option class="select-portfolio__item" value="4">Motion</option>
+						</select>
+					</div>
+
+					<!--*  PRODUCTS GRID *-->
+					<div class="portfolio__products products">
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-1.webp" alt="Product 1">
+							<div class="products__overlay">
+								<div class="products__label">design</div>
+								<h3 class="products__title products__title--uppercase">sofa</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-2.webp" alt="Product 2">
+							<div class="products__overlay">
+								<div class="products__label">branding</div>
+								<h3 class="products__title">KeyBoard</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-3.webp" alt="Product 3">
+							<div class="products__overlay">
+								<div class="products__label">illustration</div>
+								<h3 class="products__title">work media</h3>
+							</div>
+						</a>
+						<a href="#" class="products__item">
+							<img src="img/portfolio/card-4.webp" alt="Product 4">
+							<div class="products__overlay">
+								<div class="products__label">motion</div>
+								<h3 class="products__title">DDDone</h3>
+							</div>
+						</a>
+					</div>
+					<div class="portfolio__button"><a class="button button--dark-secondary">explore more</a></div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<span>© 2024 Gregory Mosia</span>
+			</div>
+		</footer>
+	</div>
 </body>
 
 </html>
