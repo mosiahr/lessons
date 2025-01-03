@@ -251,6 +251,7 @@ textarea {
     border-radius: 6px;
     overflow: hidden;
     aspect-ratio: 470 / 416;
+	inline-size: 100%;
 }
 .products__item img {
 	width: 100%;
@@ -387,8 +388,43 @@ textarea {
 
 
 /** PORTFOLIO GRID */
-
-
+.products--grid {
+	display: grid;
+	grid-template-columns: minmax(auto, 470px) minmax(0px, 170px) minmax(auto, 470px);
+	grid-auto-rows: 416px;
+}
+.products__item--grid {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+	inline-size: 100%;
+	min-height: 416px;
+}
+.products__item--grid:nth-child(4n+2),
+.products__item--grid:nth-child(4n+3){
+	grid-column: span 2;
+}
+@media (max-width: 919.98px) {
+	.products--grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+	.products__item--grid:nth-child(n) {
+		grid-column: span 1;
+	}
+}
+@media (max-width: 767.98px) {
+	.products--grid {
+		grid-auto-rows: auto;
+		gap: 15px;
+	}
+}
+@media (max-width: 509.98px) {
+	.products--grid {
+		grid-template-columns: 1fr;
+		gap: 32px;
+	}
+}
 
 .footer {
     background-color: #fdf0e9;
