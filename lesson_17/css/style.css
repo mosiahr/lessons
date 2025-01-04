@@ -70,19 +70,12 @@ textarea {
 	border: 1px solid #FFF;
 }
 
-.page {
+.portfolio {
     background-color: #28293e;
-}
-.page__portfolio, 
-.portfolio-grid__label {
-	margin-block-end: 140px;
-}
-.portfolio, 
-.portfolio-grid {
     padding-block-start: 92px;
+	padding-block-end: 30px;
 }
-.portfolio__label, 
-.portfolio-grid__label {
+.portfolio__label {
     margin-block-end: 20px;
     text-align: center;
 }
@@ -92,8 +85,7 @@ textarea {
     line-height: 2;
     text-transform: uppercase;
 }
-.portfolio__title, 
-.portfolio-grid__title {
+.portfolio__title {
     margin: 0 auto 36px;
     text-align: center;
 }
@@ -425,6 +417,16 @@ textarea {
 		gap: 32px;
 	}
 }
+
+.second-portfolio {
+	background-color: #FDF0E9;
+	padding-block-start: 76px;
+}
+.second-portfolio__filter .filter__item{
+	color: #391400;
+}
+
+
 
 .footer {
     background-color: #fdf0e9;
