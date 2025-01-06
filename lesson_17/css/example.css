@@ -1,0 +1,245 @@
+@import url(https://fonts.googleapis.com/css?family=Epilogue:regular,700,800);
+
+/* Local fonts */
+@import url('fonts.css');
+
+/* Reset */
+@import url('reset.css');
+
+/* Keyframes */
+@import url('keyframes.css');
+
+body {
+    font-family: "Epilogue", sans-serif;
+}
+textarea {
+    resize: vertical;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: clip;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1170px;
+	margin: 0 auto;
+	padding-inline: 15px;
+}
+
+
+.portfolio {
+	background-color: #FDF0E9;
+	padding-block-start: 76px;
+}
+.portfolio__label {
+    margin-block-end: 20px;
+    text-align: center;
+}
+.label {
+    color: #EF6D58;
+    letter-spacing: 3px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+.portfolio__title {
+    margin: 0 auto 36px;
+    text-align: center;
+}
+/* .header__line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-block-end: 10px;
+} */
+.title {
+    color: #FFF;
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.14;
+    max-inline-size: 531px;
+    text-transform: capitalize;
+}
+.header__title--long {
+    max-inline-size: none;
+}
+.header__link {
+    color: #FFF;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+	text-decoration: underline;
+
+}
+@media (any-hover: hover){
+	.header__link:hover {
+		color: #EF6D58;
+		transform: scale(1.05);
+	}
+}
+
+/** PORTFOLIO FILTER  */
+.portfolio__filter {
+    margin-block-end: 68px;
+}
+.filter {
+	display: flex;
+    flex-wrap: wrap;
+    gap: 15px 60px;
+    justify-content: center;
+    text-align: center;
+}
+.filter__item{
+	color: rgba(57, 20, 0, 0.64);
+    line-height: 2;
+    text-transform: capitalize;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+.filter__item sup {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: center;
+    transform: translateY(-8px);
+}
+.filter__item--selected {
+	color: #391400;
+}
+@media (any-hover: hover){
+	.filter__item:hover {
+		color: #391400;
+		transform: scale(1.03);
+	}
+}
+@media (max-width: 991.98px) {
+	.portfolio__filter {
+		margin-block-end: 36px;
+	}
+	.filter {
+		column-gap: 30px;
+	}
+	.portfolio__label {
+		margin-block-end: 17px;
+	}
+	.portfolio__title {
+		margin-block-end: 35px;
+	}
+	.title {
+		font-size: 40px;
+		line-height: 1.2;
+	}
+}
+@media (max-width: 767.98px) {
+	.portfolio__filter {
+		margin-block-end: 24px;
+	}
+	.filter {
+		column-gap: 20px;
+	}
+}
+@media (max-width: 509.98px) {
+	.portfolio__filter  {
+		display: none;
+	}
+	.portfolio__wrapper-select {
+		position: relative;
+	}
+	.portfolio__wrapper-select::after {
+		content: "";
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-color: #EF6D58 transparent transparent transparent;
+		position: absolute;
+		inset-block-start: 21px;
+		inset-inline-end: 16px;
+		color: #EF6D58;
+		z-index: 1;
+	}
+	.portfolio__select {
+		margin-block-end: 48px;
+	}
+	.select-portfolio {
+		appearance: none;
+		color: rgba(57, 20, 0, 0.64);
+		font-size: 16px;
+		line-height: 2;
+		padding: 9px 16px 7px;
+		width: 100%;
+		border-radius: 6px;
+		text-transform: capitalize;
+	}
+	.select-portfolio:focus-visible {
+		border: 2px solid #EF6D58;
+		outline: none;
+	}
+}
+@media (min-width: 509.98px) {
+	.portfolio__select {
+		display: none;
+	}
+}
+
+.products {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 726px;
+	grid-auto-rows: 416px;
+}
+
+.products__item {
+	background-color: #FFF;
+	border-radius: 6px;
+	overflow: hidden;
+	transition-duration: 0.3s;
+	/* max-height: 416px; */
+	aspect-ratio: 570/416;
+	inline-size: 100%;
+	block-size: 100%;
+}
+
+.products__item img {
+	inline-size: 100%;
+	block-size: 100%;
+	object-fit: cover;
+
+}
+
+.products__item:first-child {
+	grid-column: span 2;
+	/* max-height: 726px; */
+
+	aspect-ratio: 1170/726;
+}
+
+
+/* @media (min-width: 544.98px) {
+	.products__item:nth-child(1) {
+		grid-column: span 2;
+	}
+	.products {
+		grid-template-rows: 720px;
+	}
+}
+@media (max-width: 544.98px) {
+	.products {
+		grid-template-columns: 1fr;
+	}
+} */
+
+
+.footer {
+    background-color: #fdf0e9;
+    color: #391400;
+    font-weight: 700;
+    text-align: center;
+	padding-block: 15px;
+}
