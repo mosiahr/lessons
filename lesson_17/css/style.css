@@ -274,13 +274,9 @@ textarea {
     opacity: 0.3181;
     width: 100%;
     height: 100%;
-
-
-    /* transition-duration: 0.3s; */
-	transform: scaleX(100%);
+	transform: scaleX(1);
 	transform-origin: top;
 	transition: transform 0.5s;
-
 }
 
 @media (any-hover: hover){
@@ -419,7 +415,6 @@ textarea {
 }
 
 /** PORTFOLIO SECOND GRID */
-
 .portfolio--second {
 	background-color: #FDF0E9;
 	padding-block-start: 76px;
@@ -479,7 +474,6 @@ textarea {
 
 /** PRODUCTS PAGINATION */
 .portfolio__pagination {
-	/* margin-block-end: 112px; */
 }
 .pagination {
 	display: flex;
