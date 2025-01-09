@@ -75,6 +75,7 @@ textarea {
 	padding-inline: 15px;
 }
 
+/** FOOTER */
 .footer {
     background-color: #fdf0e9;
     color: #391400;
