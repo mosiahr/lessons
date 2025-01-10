@@ -39,6 +39,7 @@ DEFAULT_INDEX_HTML = '''<!DOCTYPE html>
          </div>
       </footer>
    </div>
+   <script src="js/script.js"></script>
 </body>
 
 </html>'''
@@ -163,6 +164,11 @@ input[type="number"] {
 }
 '''
 
+DEFAULT_STYLE_JS = \
+'''
+"use strict"
+'''
+
 def ispath(path):
     if os.path.exists(path):
         return True
@@ -209,6 +215,4 @@ if __name__ == '__main__':
     create_file(os.path.join(project_dir, 'css/reset.css'), DEFAULT_RESET_CSS)
     create_file(os.path.join(project_dir, 'css/fonts.css'))
     create_file(os.path.join(project_dir, 'css/keyframes.css'))
-
-
-
+    create_file(os.path.join(project_dir, 'js/script.js'), DEFAULT_STYLE_JS)
