@@ -67,6 +67,22 @@ textarea {
 }
 
 
+.example-grid {
+	display: grid;
+	gap: 30px;
+}
+.example-grid__item {
+	background-color: #77608d;
+	border-radius: 20px;
+	/* АРТЕФАКТ при застосуванні для грід-елементу  */
+	/* aspect-ratio: 470 / 416; */
+}
+
+.example-grid__content {
+	aspect-ratio: 470 / 416;
+}
+
+
 
 /** FOOTER  */
 .footer {
